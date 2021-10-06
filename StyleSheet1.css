@@ -1,0 +1,71 @@
+.banner {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px
+}
+
+.banner .imagenbanner {
+    min-height: 250px;
+    background-image: url("kebab.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner .navigation {
+    margin-top: 15px;
+}
+
+.banner .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.banner .navigation li {
+float: left;
+}
+
+.banner .navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.banner .navigation li a:hover {
+    background-color: #111;
+}
+
+.content {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    min-height: 650px;
+}
+
+.content .cars {
+    margin: 10px 15px 10px 15px;
+    width: 1200px;
+    height: 600px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    float: left;
+}
+
+.content .filters {
+    width: 300px;
+    height: 350px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 10px;
+    margin-left: 25px;
+    float: left;
+}
