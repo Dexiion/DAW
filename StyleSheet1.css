@@ -46,13 +46,13 @@ float: left;
     border-style: solid;
     border-width: 2px;
     border-color: black;
-    min-height: 650px;
+    min-height: 1200px;
 }
 
 .content .cars {
     margin: 10px 15px 10px 15px;
     width: 1200px;
-    height: 600px;
+    height: 800px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -68,4 +68,140 @@ float: left;
     margin-top: 10px;
     margin-left: 25px;
     float: left;
+}
+
+.content .outstanding {
+    width: 1150px;
+    height: 350px;
+    margin: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.content .outstanding .carPreview {
+    width: 242px;
+    height: 310px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+}
+
+.content .outstanding .carPreview .carPreviewImage {
+    width: 218px;
+    height: 150px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 10px;
+}
+
+.content .outstanding .carPreview img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .content .outstanding .carPreview img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.content .outstanding .carPreview .carPreviewInfo {
+    width: 218px;
+    height: 120px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 10px;
+}
+
+.content .otherCars {
+    width: 1000px;
+    height: 278px;
+    margin-right: 20px;
+    margin-left: 80px;
+    margin-top: 70px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.content .otherCars .otherCarsPreview {
+    width: 220px;
+    height: 240px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 20px;
+    float: left;
+}
+
+.content .otherCars .otherCarsPreview .otherCarsPreviewImage {
+    width: 200px;
+    height: 128px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 8px;
+}
+
+.content .otherCars .otherCarsPreview img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .content .otherCars .otherCarsPreview img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.content .otherCars .otherCarsPreview .otherCrasPreviewInfo {
+    width: 200px;
+    height: 80px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 10px;
+}
+
+.content .cars .carPreview .carPreviewInfo .brand {
+    font-size: 1.2em;
+    color:crimson;
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 10px;
+}
+
+.content .cars .carPreview .carPreviewInfo .kilometres {
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 0.8em;
+    height: 10px;
+    color: gray;
+}
+
+.content .cars .carPreview .carPreviewInfo .price {
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 1.3em;
+    height: 10px;
+    color:darkred;
+}
+
+.content .cars .carPreview .carPreviewInfo .button {
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 2px;
 }
