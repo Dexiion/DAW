@@ -43,9 +43,6 @@ float: left;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
     min-height: 1200px;
 }
 
@@ -53,21 +50,8 @@ float: left;
     margin: 10px 15px 10px 15px;
     width: 1200px;
     height: 800px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
     float: left;
-}
-
-.content .filters {
-    width: 300px;
-    height: 350px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    margin-top: 10px;
-    margin-left: 25px;
-    float: left;
+    background-color: #f5f5f5;
 }
 
 .content .outstanding {
@@ -79,25 +63,22 @@ float: left;
     border-color: black;
 }
 
-.content .outstanding .carPreview {
-    width: 242px;
-    height: 310px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    float: left;
-}
+    .content .outstanding .carPreview {
+        width: 242px;
+        height: 310px;
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: #d1d1d1;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        float: left;
+    }
 
 .content .outstanding .carPreview .carPreviewImage {
     width: 218px;
     height: 150px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    margin: 10px;
+    margin: 13px;
 }
 
 .content .outstanding .carPreview img {
@@ -116,9 +97,6 @@ float: left;
 .content .outstanding .carPreview .carPreviewInfo {
     width: 218px;
     height: 120px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
     margin: 10px;
 }
 
@@ -204,4 +182,73 @@ float: left;
     width: 200px;
     margin-left: 10px;
     margin-top: 2px;
+}
+
+.content .filters {
+    width: 300px;
+    height: 470px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 30px;
+    margin-left: 25px;
+    float: left;
+}
+
+.content .filters .selector {
+    text-align:center;
+    margin: 10px;
+}
+
+.content .filters label {
+    font-size: 1.3em;
+}
+
+.content .filters .selector select{
+    width: 280px;
+    margin-top: 15px;
+}
+
+.content .filters .priceSelector .title {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.content .filters .priceSelector {
+    margin: 10px;
+    width: 280px;
+    min-height: 61px;
+}
+
+.content .filters .priceSelector .priceRange {
+    margin-top: 15px;
+}
+
+.content .filters .priceSelector .priceRange .minPrice {
+    float: left;
+}
+
+.content .filters .priceSelector .priceRange .maxPrice {
+    float: right;
+}
+
+.content .filters .priceSelector label {
+    font-size: 0.8em;
+}
+
+.content .filters .priceSelector select {
+    width: 100px;
+}
+
+.content .filters .filterButton {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.content .filters .filterButton button {
+    width: 250px;
+    height: 50px;
+    font-size: 1.3em;
+    background-color: lightgreen;
+    border-radius: 12px;
 }
