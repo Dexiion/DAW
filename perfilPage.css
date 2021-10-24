@@ -1,0 +1,65 @@
+.perfil {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+
+    width: 1850px;
+    height: 549px;
+    left: calc(50% - 1838px/2);
+    top: calc(50% - 650px/2 + 199.5px);
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+
+}
+
+.perfil .Framefoto{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+   /* border: 1px solid blue;*/
+    box-sizing: border-box;
+}
+
+.perfil .Framedetalles {
+    flex-grow: 3;
+    /*border: 1px solid #000000; */
+    box-sizing: border-box;
+}
+
+.perfil .Framedetalles .tablaperfil{
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+
+.perfil .Framefoto .perfilfoto{
+    margin-top: 10%;
+    flex-grow: 2;
+    /*border: 1px solid pink;*/
+    box-sizing: border-box;
+}
+
+.perfil .Framefoto .botoncambiarfoto{
+    margin-bottom: 15%;
+    flex-grow: 1;
+    /*border: 1px solid #000000;*/
+    box-sizing: border-box;
+}
+
+.perfil .Framefoto .botoncambiarfoto .button{
+    margin-left: 25%;
+    margin-top: 10% ;
+    padding-left: 42%;
+    text-align: center;
+}
+
+.perfil .Framefoto .perfilfoto img{
+    width: auto;
+    height: 100%;
+    margin-left: 25%; 
+}
