@@ -23,6 +23,7 @@
     overflow: hidden;
     background-color: #333;
     font-size: 1.3em;
+    min-height: 71px;
 }
 
 .banner .navigation li {
@@ -44,8 +45,8 @@
     display: block;
     color: white;
     text-align: center;
-    margin-top: 10px;
     padding: 14px 20px;
+    margin-top: 10px;
     text-decoration: none;
 }
 
@@ -458,9 +459,6 @@ input[type=text], input[type=password] {
 .content .filters .filterButton button {
     width: 250px;
     height: 50px;
-    font-size: 1.3em;
-    background-color: lightgreen;
-    border-radius: 12px;
 }
 
 .content .ads {
@@ -557,22 +555,12 @@ input[type=text], input[type=password] {
  
    /* border: 1px solid #000000; */
     box-sizing: border-box;
-    
-    
-
 }
+
 .anuncio .Framefotoanuncio .Imagen img{
-    
-    
     width: 100%;
     height: auto;
-    
-    
-
 }
-
-
-
 
 .anuncio .Frameinfoanuncio{
     display: flex;
