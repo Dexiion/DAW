@@ -1,0 +1,36 @@
+.login {
+    position: absolute;
+    width: 1847px;
+    height: 615px;
+    margin-left: 20px;
+    margin-right: 20px;
+    top: 350px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+}
+
+.loginForm {
+    width: 400px;
+    height: 498px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 45px;
+    position : absolute;
+    top : 50%; left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+.login .loginForm .user {
+    border: 1px solid #000000;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 50px;;
+}
+
+.login .loginForm .user {
+    border: 1px solid #000000;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 50px;;
+}
