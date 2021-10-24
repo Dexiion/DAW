@@ -427,20 +427,23 @@ input[type=text], input[type=password] {
 
 .content .filters .priceSelector {
     margin: 10px;
-    width: 280px;
+    width: 335px;
     min-height: 61px;
 }
 
 .content .filters .priceSelector .priceRange {
     margin-top: 15px;
+    min-height: 20px;
 }
 
 .content .filters .priceSelector .priceRange .minPrice {
     float: left;
+    margin-left: 30px;
 }
 
 .content .filters .priceSelector .priceRange .maxPrice {
     float: right;
+    margin-right: 30px;
 }
 
 .content .filters .priceSelector label {
