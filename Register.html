@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="registerPage.css">
+        <link rel="stylesheet" href="StyleSheet1.css">
+        <title>Login Page</title>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><div class="logo">LOGO</div></li>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li style="float:right"><a class="active" href="#about">Publicar Anuncio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="register">
+            <div class="registerForm">
+                <form action="Home.html">
+                    <div class="container">
+                      <h1>Registro</h1>
+                      <p>Rellene este formulario para crear su cuenta</p>
+                      <hr>
+                      <label for="user"><b>Usuario</b></label>
+                      <input type="text" placeholder="Introduzca Nombre de Usuario" name="user" id="user" required>
+                  
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Introduzca Email" name="email" id="email" required>
+                  
+                      <label for="psw"><b>Contraseña</b></label>
+                      <input type="password" placeholder="Introduzca Contraseña" name="psw" id="psw" required>
+                  
+                      <label for="psw-repeat"><b>Repetir Contraseña</b></label>
+                      <input type="password" placeholder="Repita la Contraseña" name="psw-repeat" id="psw-repeat" required>
+
+                      <label for="loc"><b>Provincia</b></label>
+                      <input type="text" placeholder="Provincia" name="loc" id="loc" required>
+
+                      <label for="tel"><b>Telefono</b></label>
+                      <input type="tel" placeholder="Telefono (Ópcional) - Ej: 123 456 789" name="tel" id="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+                      <hr>
+                  
+                      <p>Creando esta cuenta usted acepta nuestra <a href="#">Politica y Terminos</a>.</p>
+                      <button type="submit" class="registerbtn">Registrar</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </body>      
+</html>
