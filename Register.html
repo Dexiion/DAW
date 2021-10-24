@@ -9,8 +9,6 @@
     </head>
     <body>
         <div class="banner">
-            <div class="imagenbanner">
-            </div>
             <div class="navigation">
                 <nav>
                     <ul>
@@ -30,6 +28,8 @@
                       <h1>Registro</h1>
                       <p>Rellene este formulario para crear su cuenta</p>
                       <hr>
+                      <label for="user"><b>Usuario</b></label>
+                      <input type="text" placeholder="Introduzca Nombre de Usuario" name="user" id="user" required>
                   
                       <label for="email"><b>Email</b></label>
                       <input type="text" placeholder="Introduzca Email" name="email" id="email" required>
@@ -39,6 +39,12 @@
                   
                       <label for="psw-repeat"><b>Repetir Contraseña</b></label>
                       <input type="password" placeholder="Repita la Contraseña" name="psw-repeat" id="psw-repeat" required>
+
+                      <label for="loc"><b>Provincia</b></label>
+                      <input type="text" placeholder="Provincia" name="loc" id="loc" required>
+
+                      <label for="tel"><b>Telefono</b></label>
+                      <input type="tel" placeholder="Telefono (Ópcional) - Ej: 123 456 789" name="tel" id="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
                       <hr>
                   
                       <p>Creando esta cuenta usted acepta nuestra <a href="#">Politica y Terminos</a>.</p>
