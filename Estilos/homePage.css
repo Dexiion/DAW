@@ -12,6 +12,25 @@
     
 }
 
+.banner .navigation .logo {
+    width: 80px;
+    height: 25px;
+}
+
+.banner .navigation .logo img {
+    margin-top: -10px;
+    width: 150%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .banner .navigation .logo img {
+        height: 175%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
 .banner .navigation {
     margin-top: 15px;
 }
