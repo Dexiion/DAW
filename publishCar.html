@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Estilos/homePage.css">
+    <link rel="stylesheet" href="Estilos/publishCar.css">
+    <title>Publicar anuncio</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="imagenbanner">
+        </div>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><div class="logo">LOGO</div></li>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li style="float:right"><div class="profile"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></div></li>
+                    <li style="float:right"><a class="active" href="#about">Publicar Anuncio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="carForm">
+        <form action="Home.html">
+            <!-- Tabla datos -->
+            <table class="dataBox">
+                <tr>
+                    <td><label for="fecha"><b>Fecha de matriculación</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="date" placeholder="Introduzca fecha" name="fecha" id="fecha" required></td>
+                </tr>
+                <tr>
+                    <td><label for="marca"><b>Marca</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Introduzca marca" name="marca" id="marca" required></td>
+                </tr>
+                <tr>
+                    <td><label for="modelo"><b>Modelo</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Introduzca modelo" name="modelo" id="modelo" required></td>
+                </tr>
+                <tr>
+                    <td><label for="combustible"><b>Combustible</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Introduzca combustible" name="combustible" id="combustible" required></td>
+                </tr>
+                <tr>
+                    <td><label for="km"><b>Kilometros</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="Introduzca kilometros" name="km" id="km" required></td>
+                </tr>
+            </table>
+            <!-- Tabla detalles -->
+            <table class="detailBox">
+                <tr>
+                    <td><label for="potencia"><b>Potencia</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="Introduzca potencia" name="potencia" id="potencia" required></td>
+                </tr>
+                <tr>
+                    <td><label for="color"><b>Color</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Introduzca color" name="color" id="color" required></td>
+                </tr>
+                <tr>
+                    <td><label for="puertas"><b>Puertas</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="Introduzca numero de puertas" name="puertas" id="puertas" required></td>
+                </tr>
+                <tr>
+                    <td><label for="descripcion"><b>Descripción detallada</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Introduzca descripcion" name="descripcion" id="descripcion" required></td>
+                </tr>
+            </table>
+            <!-- Tabla fotos y publicar -->
+            <table class="imagesBox">
+                <tr>
+                    <td><button type="button" class="addImagebtn">Añadir fotos</button></td>
+                </tr>
+                <tr>
+                    <td><label>Fotos</label></td> <!-- Añadir carrusel -->
+                </tr>
+                <tr>
+                    <td><button type="submit" class="publishbtn">Publicar</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
