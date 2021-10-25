@@ -1,25 +1,23 @@
 .anuncio {
-    position: absolute;
     width: 1865px;
-    height: 615px;
+    height: 760px;
     margin-left: 20px;
     margin-right: 20px;
-    top: 420px;
 
  /*   border: 1px solid #000000; */
     box-sizing: border-box;
 }
 
+.anuncio .descripcion {
+    width: 1298px;
+}
+
 .anuncio .Framefotoanuncio{
     display: flex;
     flex-direction: column;
-    
-
-    position: absolute;
     width: 486px;
     height: 453px;
-    left: 43px;
-    top: 78px;
+    float: left;
   
  /*   border: 1px solid #000000; */
     box-sizing: border-box;
@@ -40,9 +38,6 @@
     
 }
 
-
-
-
 .anuncio .Framefotoanuncio .Imagen{
     
     flex-grow: 50;
@@ -60,11 +55,11 @@
 .anuncio .Frameinfoanuncio{
     display: flex;
     flex-direction: column;
-    position: absolute;
     width: 812px;
     height: 369px;
-    left: 596px;
-    top: 162px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 90px;
 
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
@@ -123,13 +118,10 @@
 
 
 .anuncio .Frameinfovendedor{
-    position: absolute;
     display: flex;
     flex-direction: column;
     width: 300px;
     height: 546px;
-    left: 1509px;
-    top: 17px;
     
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
@@ -173,11 +165,10 @@
 .anuncio .minigaleria{
     display: flex;
     flex-direction: row;
-    position: absolute;
     width: 812px;
     height: 71px;
-    left: 596px;
-    top: 41px;
+    margin-top: 20px;
+    margin-left: 550px;
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
@@ -197,3 +188,45 @@
     }
 }
 
+<<<<<<< HEAD
+=======
+.footer {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer .footerTitle {
+    font-size: 2.2em;
+    margin-top: 10px;
+}
+
+.footer .footerDescription {
+    text-align: center;
+}
+
+.footer .footerCopyright {
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    height: 50px;
+}
+
+.footer .footerCopyright p {
+    margin-left: 15px;
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer .footerCopyright p a{
+    color:#44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+>>>>>>> 8a57d38b10771cfa5d4a72cf148164d088869fc3
