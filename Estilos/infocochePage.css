@@ -1,25 +1,23 @@
 .anuncio {
-    position: absolute;
     width: 1865px;
-    height: 615px;
+    height: 760px;
     margin-left: 20px;
     margin-right: 20px;
-    top: 420px;
 
  /*   border: 1px solid #000000; */
     box-sizing: border-box;
 }
 
+.anuncio .descripcion {
+    width: 1298px;
+}
+
 .anuncio .Framefotoanuncio{
     display: flex;
     flex-direction: column;
-    
-
-    position: absolute;
     width: 486px;
     height: 453px;
-    left: 43px;
-    top: 78px;
+    float: left;
   
  /*   border: 1px solid #000000; */
     box-sizing: border-box;
@@ -40,9 +38,6 @@
     
 }
 
-
-
-
 .anuncio .Framefotoanuncio .Imagen{
     
     flex-grow: 50;
@@ -60,11 +55,11 @@
 .anuncio .Frameinfoanuncio{
     display: flex;
     flex-direction: column;
-    position: absolute;
     width: 812px;
     height: 369px;
-    left: 596px;
-    top: 162px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 90px;
 
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
@@ -79,6 +74,25 @@
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
+
+.anuncio .Frameinfoanuncio .descripcion{
+    
+    flex-grow: 1;
+    
+    /*border: 1px solid #000000;*/
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.anuncio .Frameinfoanuncio .descripciontexto{
+    
+    flex-grow: 3;
+    /*border: 1px solid #000000;*/
+    box-sizing: border-box;
+}
+
+
+
 .anuncio .Frameinfoanuncio .Detalles{
     
     flex-grow: 50;
@@ -88,10 +102,12 @@
     box-sizing: border-box;
     background-color: #f5f5f5;
 }
+
+
 .anuncio .Frameinfoanuncio .Detalles #tabla{
     
-    width: 90%;
-    height: 70%;
+    width: 95%;
+    height: 90%;
     justify-content: center; 
     align-items: center; 
     padding-left: 1%;
@@ -104,13 +120,10 @@
 
 
 .anuncio .Frameinfovendedor{
-    position: absolute;
     display: flex;
     flex-direction: column;
     width: 300px;
     height: 546px;
-    left: 1509px;
-    top: 17px;
     
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
@@ -154,11 +167,10 @@
 .anuncio .minigaleria{
     display: flex;
     flex-direction: row;
-    position: absolute;
     width: 812px;
     height: 71px;
-    left: 596px;
-    top: 41px;
+    margin-top: 20px;
+    margin-left: 550px;
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
@@ -177,3 +189,4 @@
         object-position: center center;
     }
 }
+
