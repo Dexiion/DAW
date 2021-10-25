@@ -12,6 +12,23 @@
     width: 1298px;
 }
 
+.anuncio .descripcion{
+    
+    float: left;
+    /*border: 1px solid #000000;*/
+    box-sizing: border-box;
+    /*width: 100%;*/
+    width: 1347.5px;
+    margin-top: -150px;
+}
+
+.anuncio .descripciontexto{
+    
+    flex-grow: 3;
+    /*border: 1px solid #000000;*/
+    box-sizing: border-box;
+}
+
 .anuncio .Framefotoanuncio{
     display: flex;
     flex-direction: column;
@@ -75,21 +92,7 @@
     box-sizing: border-box;
 }
 
-.anuncio .Frameinfoanuncio .descripcion{
-    
-    flex-grow: 1;
-    
-    /*border: 1px solid #000000;*/
-    box-sizing: border-box;
-    width: 100%;
-}
 
-.anuncio .Frameinfoanuncio .descripciontexto{
-    
-    flex-grow: 3;
-    /*border: 1px solid #000000;*/
-    box-sizing: border-box;
-}
 
 
 
