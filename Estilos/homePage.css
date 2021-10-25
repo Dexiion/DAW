@@ -178,6 +178,10 @@ input[type=text], input[type=password] {
     }
   }
 
+section {
+    width: 1200px;
+}
+
 .content {
     margin-left: 20px;
     margin-right: 20px;
@@ -393,8 +397,11 @@ input[type=text], input[type=password] {
 }
 
 /*  Filtros */
+aside {
+    float: left;
+}
 
-.content .filters {
+.filters {
     width: 355px;
     height: 470px;
     border-style: solid;
@@ -406,65 +413,65 @@ input[type=text], input[type=password] {
     margin-bottom: 176px;
 }
 
-.content .filters .selector {
+.filters .selector {
     text-align:center;
     margin: 10px;
 }
 
-.content .filters label {
+.filters label {
     font-size: 1.3em;
 }
 
-.content .filters .selector select{
+.filters .selector select{
     width: 280px;
     margin-top: 15px;
 }
 
-.content .filters .priceSelector .title {
+.filters .priceSelector .title {
     text-align: center;
     font-size: 1.3em;
 }
 
-.content .filters .priceSelector {
+.filters .priceSelector {
     margin: 10px;
     width: 335px;
     min-height: 61px;
 }
 
-.content .filters .priceSelector .priceRange {
+.filters .priceSelector .priceRange {
     margin-top: 15px;
     min-height: 20px;
 }
 
-.content .filters .priceSelector .priceRange .minPrice {
+.filters .priceSelector .priceRange .minPrice {
     float: left;
     margin-left: 30px;
 }
 
-.content .filters .priceSelector .priceRange .maxPrice {
+.filters .priceSelector .priceRange .maxPrice {
     float: right;
     margin-right: 30px;
 }
 
-.content .filters .priceSelector label {
+.filters .priceSelector label {
     font-size: 0.8em;
 }
 
-.content .filters .priceSelector select {
+.filters .priceSelector select {
     width: 100px;
 }
 
-.content .filters .filterButton {
+.filters .filterButton {
     margin-top: 35px;
     text-align: center;
 }
 
-.content .filters .filterButton button {
+.filters .filterButton button {
     width: 250px;
     height: 50px;
 }
 
-.content .ads {
+.ads {
     width: 340px;
     height: 350px;
     margin-top: 200px;
@@ -476,13 +483,13 @@ input[type=text], input[type=password] {
     float: left;
 }
 
-.content .ads img {
+.ads img {
     width: 100%;
     height: auto;
 }
 
 @supports(object-fit: cover) {
-    .content .ads img {
+    .ads img {
         height: 100%;
         object-fit: cover;
         object-position: center center;

@@ -7,20 +7,23 @@
     <title></title>
 </head>
 <body>
-    <div class="banner">
-        <div class="imagenbanner"></div>
-        <div class="navigation">
-            <nav>
-                <ul>
-                    <li><div class="logo">LOGO</div></li>
-                    <li><a href="Home.html">Inicio</a></li>
-                    <li><a href="perfil.html">Mi Perfil</a></li>
-                    <li style="float:right"><div class="profile"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></div></li>
-                    <li style="float:right"><a class="active" href="#about">Publicar Anuncio</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="banner">
+            <div class="imagenbanner"></div>
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><div class="logo">LOGO</div></li>
+                        <li><a href="Home.html">Inicio</a></li>
+                        <li><a href="perfil.html">Mi Perfil</a></li>
+                        <li style="float:right"><div class="profile"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></div></li>
+                        <li style="float:right"><a class="active" href="#about">Publicar Anuncio</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
+    </header>
+    
     <div id="id01" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
@@ -47,163 +50,166 @@
           </div>
         </form>
       </div>
-    <div class="content">
-        <div class="cars">
-            <div class="outstanding">
-                <div class="carPreview">
-                    <div class="carPreviewImage">
-                        <img src="opelcorsa.jpg"/>
-                    </div>
-                    <div class="carPreviewInfo">
-                        <p class="brand"><b>Opel</b></p>
-                        <p class="model">Corsa</p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">-56 km</p>
-                            <p class="location"><b>Las Palmas</b></p>
+    <section>
+        <div class="content">
+            <div class="cars">
+                <div class="outstanding">
+                    <div class="carPreview">
+                        <div class="carPreviewImage">
+                            <img src="opelcorsa.jpg"/>
                         </div>
-                        <p class="gearbox">Creo que si xd</p>
-                        <p class="price"><b>Dame billete</b></p>
-                        <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                        <div class="carPreviewInfo">
+                            <p class="brand"><b>Opel</b></p>
+                            <p class="model">Corsa</p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">-56 km</p>
+                                <p class="location"><b>Las Palmas</b></p>
+                            </div>
+                            <p class="gearbox">Creo que si xd</p>
+                            <p class="price"><b>Dame billete</b></p>
+                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                        </div>
+                    </div>
+                    <div class="carPreview">
+                        <div class="carPreviewImage">
+                            <img src="Imagenes/kebab.jpg" />
+                        </div>
+                        <div class="carPreviewInfo">
+                            <p class="brand"><b>Opel</b></p>
+                            <p class="model">Corsa</p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="gearbox">Manual</p>
+                            <p class="price"><b>17.999,99€</b></p>
+                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                        </div>
+                    </div>
+                    <div class="carPreview">
+                        <div class="carPreviewImage">
+                            <img src="Imagenes/kebab.jpg" />
+                        </div>
+                        <div class="carPreviewInfo">
+                            <p class="brand"><b>Opel</b></p>
+                            <p class="model">Corsa</p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="gearbox">Manual</p>
+                            <p class="price"><b>18.000€</b></p>
+                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                        </div>
+                    </div>
+                    <div class="carPreview">
+                        <div class="carPreviewImage">
+                            <img src="Imagenes/kebab.jpg" />
+                        </div>
+                        <div class="carPreviewInfo">
+                            <p class="brand"><b>Opel</b></p>
+                            <p class="model">Corsa</p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="gearbox">Automatico</p>
+                            <p class="price"><b>18.000€</b></p>
+                            <button class="button">Mas Info</button>
+                        </div>
                     </div>
                 </div>
-                <div class="carPreview">
-                    <div class="carPreviewImage">
-                        <img src="Imagenes/kebab.jpg" />
-                    </div>
-                    <div class="carPreviewInfo">
-                        <p class="brand"><b>Opel</b></p>
-                        <p class="model">Corsa</p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location"><b>St. Cruz de Tenerife</b></p>
+    
+                <div class="otherCars">
+                    <div class="otherCarsPreview">
+                        <div class="otherCarsPreviewImage">
+                            <img src="Imagenes/falafel.jpg" />
                         </div>
-                        <p class="gearbox">Manual</p>
-                        <p class="price"><b>17.999,99€</b></p>
-                        <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
-                    </div>
-                </div>
-                <div class="carPreview">
-                    <div class="carPreviewImage">
-                        <img src="Imagenes/kebab.jpg" />
-                    </div>
-                    <div class="carPreviewInfo">
-                        <p class="brand"><b>Opel</b></p>
-                        <p class="model">Corsa</p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location"><b>St. Cruz de Tenerife</b></p>
+                        <div class="otherCarsPreviewInfo">
+                            <p class="brand"><b>Opel Corsa</b></p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location"><b>Las Palmas</b></p>
+                            </div>
+                            <p class="price">Sí</p>
+                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
                         </div>
-                        <p class="gearbox">Manual</p>
-                        <p class="price"><b>18.000€</b></p>
-                        <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
                     </div>
-                </div>
-                <div class="carPreview">
-                    <div class="carPreviewImage">
-                        <img src="Imagenes/kebab.jpg" />
-                    </div>
-                    <div class="carPreviewInfo">
-                        <p class="brand"><b>Opel</b></p>
-                        <p class="model">Corsa</p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                    <div class="otherCarsPreview">
+                        <div class="otherCarsPreviewImage">
+                            <img src="Imagenes/falafel.jpg" />
                         </div>
-                        <p class="gearbox">Automatico</p>
-                        <p class="price"><b>18.000€</b></p>
-                        <button class="button">Mas Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="otherCars">
-                <div class="otherCarsPreview">
-                    <div class="otherCarsPreviewImage">
-                        <img src="Imagenes/falafel.jpg" />
-                    </div>
-                    <div class="otherCarsPreviewInfo">
-                        <p class="brand"><b>Opel Corsa</b></p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location"><b>Las Palmas</b></p>
+                        <div class="otherCarsPreviewInfo">
+                            <p class="brand"><b>Opel Corsa</b></p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="price">26.750€</p>
+                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
                         </div>
-                        <p class="price">Sí</p>
-                        <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
                     </div>
-                </div>
-                <div class="otherCarsPreview">
-                    <div class="otherCarsPreviewImage">
-                        <img src="Imagenes/falafel.jpg" />
-                    </div>
-                    <div class="otherCarsPreviewInfo">
-                        <p class="brand"><b>Opel Corsa</b></p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location"><b>St. Cruz de Tenerife</b></p>
+                    <div class="otherCarsPreview">
+                        <div class="otherCarsPreviewImage">
+                            <img src="Imagenes/falafel.jpg" />
                         </div>
-                        <p class="price">26.750€</p>
-                        <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
-                    </div>
-                </div>
-                <div class="otherCarsPreview">
-                    <div class="otherCarsPreviewImage">
-                        <img src="Imagenes/falafel.jpg" />
-                    </div>
-                    <div class="otherCarsPreviewInfo">
-                        <p class="brand"><b>Opel Corsa</b></p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                        <div class="otherCarsPreviewInfo">
+                            <p class="brand"><b>Opel Corsa</b></p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="price">26.750€</p>
+                            <button class="button">Mas Info</button>
                         </div>
-                        <p class="price">26.750€</p>
-                        <button class="button">Mas Info</button>
                     </div>
-                </div>
-                <div class="otherCarsPreview">
-                    <div class="otherCarsPreviewImage">
-                        <img src="Imagenes/falafel.jpg" />
-                    </div>
-                    <div class="otherCarsPreviewInfo">
-                        <p class="brand"><b>Opel Corsa</b></p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                    <div class="otherCarsPreview">
+                        <div class="otherCarsPreviewImage">
+                            <img src="Imagenes/falafel.jpg" />
                         </div>
-                        <p class="price">26.750€</p>
-                        <button class="button">Mas Info</button>
-                    </div>
-                </div>
-                <div class="otherCarsPreview">
-                    <div class="otherCarsPreviewImage">
-                        <img src="Imagenes/falafel.jpg" />
-                    </div>
-                    <div class="otherCarsPreviewInfo">
-                        <p class="brand"><b>Opel Corsa</b></p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                        <div class="otherCarsPreviewInfo">
+                            <p class="brand"><b>Opel Corsa</b></p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="price">26.750€</p>
+                            <button class="button">Mas Info</button>
                         </div>
-                        <p class="price">26.750€</p>
-                        <button class="button">Mas Info</button>
                     </div>
-                </div>
-                <div class="otherCarsPreview">
-                    <div class="otherCarsPreviewImage">
-                        <img src="Imagenes/falafel.jpg" />
-                    </div>
-                    <div class="otherCarsPreviewInfo">
-                        <p class="brand"><b>Opel Corsa</b></p>
-                        <div class="kmandlocation">
-                            <p class="kilometres">128.000 km</p>
-                            <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                    <div class="otherCarsPreview">
+                        <div class="otherCarsPreviewImage">
+                            <img src="Imagenes/falafel.jpg" />
                         </div>
-                        <p class="price">26.750€</p>
-                        <button class="button">Mas Info</button>
+                        <div class="otherCarsPreviewInfo">
+                            <p class="brand"><b>Opel Corsa</b></p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="price">26.750€</p>
+                            <button class="button">Mas Info</button>
+                        </div>
+                    </div>
+                    <div class="otherCarsPreview">
+                        <div class="otherCarsPreviewImage">
+                            <img src="Imagenes/falafel.jpg" />
+                        </div>
+                        <div class="otherCarsPreviewInfo">
+                            <p class="brand"><b>Opel Corsa</b></p>
+                            <div class="kmandlocation">
+                                <p class="kilometres">128.000 km</p>
+                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                            </div>
+                            <p class="price">26.750€</p>
+                            <button class="button">Mas Info</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
+    </section>
+    <aside>
         <div class="filters">
             <div class="selector">
                 <label for="locationSelector">Provincia</label>
@@ -306,11 +312,10 @@
                 <button>Filtrar</button>
             </div>
         </div>
-
         <div class="ads">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="Imagenes/ad.gif"/></a>
         </div>
-    </div>
+    </aside>
     <footer class="footer">
         <div class="footerTitle"><b>AutoCanaria</b></div>
         <div class="footerDescription"><p style="font-size: 1.5em;">Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
