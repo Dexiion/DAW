@@ -78,8 +78,10 @@
 .anuncio .Frameinfoanuncio .descripcion{
     
     flex-grow: 1;
+    
     /*border: 1px solid #000000;*/
     box-sizing: border-box;
+    width: 100%;
 }
 
 .anuncio .Frameinfoanuncio .descripciontexto{
@@ -188,45 +190,3 @@
     }
 }
 
-<<<<<<< HEAD
-=======
-.footer {
-    width: 100%;
-    height: 280px;
-    display: flex;
-    background-color: #333;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.footer .footerTitle {
-    font-size: 2.2em;
-    margin-top: 10px;
-}
-
-.footer .footerDescription {
-    text-align: center;
-}
-
-.footer .footerCopyright {
-    background-color: rgb(36, 36, 36);
-    width: 100%;
-    height: 50px;
-}
-
-.footer .footerCopyright p {
-    margin-left: 15px;
-    float: left;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-
-.footer .footerCopyright p a{
-    color:#44bae8;
-    font-size: 16px;
-    text-decoration: none;
-}
->>>>>>> 8a57d38b10771cfa5d4a72cf148164d088869fc3
