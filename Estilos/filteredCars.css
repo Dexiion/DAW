@@ -1,0 +1,72 @@
+.cajaPreview{
+    position: absolute;
+    width: 1501px;
+    height: 400px;
+    left: 170px;
+    top: 140px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+img{
+    position: absolute;
+    width: 359px;
+    height: 292px;
+    left: 1052px;
+    top: 47px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+
+.marcaModelo{
+    position: absolute;
+    width: 290px;
+    height: 50px;
+    left: 66px;
+    top: 47px;
+}
+
+.precio{
+    position: absolute;
+    width: 290px;
+    height: 50px;
+    left: 591px;
+    top: 47px;
+}
+
+.descripcion{
+    
+    position: absolute;
+    width: 815px;
+    height: 160px;
+    left: 66px;
+    top: 137px;
+}
+
+.masInfobtn{
+    
+    position: absolute;
+    width: 600px;
+    height: 45px;
+    left: 173px;
+    top: 337px;
+    background: #EFA6A6;
+    border-radius: 20px;
+}
+
+.precio, .descripcion, .marcaModelo, .masInfobtn{
+    border: 1px solid #000000;
+    box-sizing: border-box;
+
+    margin: auto;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+

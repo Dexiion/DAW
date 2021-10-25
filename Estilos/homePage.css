@@ -179,7 +179,7 @@ input[type=text], input[type=password] {
   }
 
 section {
-    width: 70%;
+    width: 60%;
     float: left;
     
 }
@@ -401,7 +401,7 @@ section {
 /*  Filtros */
 aside {
     float: right;
-    width: 30%;
+    width: 35%;
     margin-top: 2.5%;
 }
 
