@@ -4,7 +4,6 @@
     margin-left: 20px;
     margin-right: 20px;
 
- /*   border: 1px solid #000000; */
     box-sizing: border-box;
 }
 
@@ -15,9 +14,7 @@
 .anuncio .descripcion{
     
     float: left;
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
-    /*width: 100%;*/
     width: 1347.5px;
     margin-top: -150px;
 }
@@ -25,7 +22,6 @@
 .anuncio .descripciontexto{
     
     flex-grow: 3;
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
 
@@ -36,14 +32,12 @@
     height: 453px;
     float: left;
   
- /*   border: 1px solid #000000; */
     box-sizing: border-box;
 }
 .anuncio .Framefotoanuncio .Marca-Modelo{
     
     
     flex-grow: 1;
-  /*  border: 1px solid #000000; */
     box-sizing: border-box;
     text-align: center;
     
@@ -59,8 +53,6 @@
     
     flex-grow: 50;
     width: 100%;
- 
-   /* border: 1px solid #000000; */
     box-sizing: border-box;
 }
 
@@ -77,35 +69,24 @@
     float: left;
     margin-left: 50px;
     margin-right: 90px;
-
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
     
 }
-
-
 
 .anuncio .Frameinfoanuncio .InformacionVehiculo{
     
     flex-grow: 1;
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
-
-
-
-
 
 .anuncio .Frameinfoanuncio .Detalles{
     
     flex-grow: 50;
     width: 100%;
-
     border: 1px solid #000000;
     box-sizing: border-box;
     background-color: #f5f5f5;
 }
-
 
 .anuncio .Frameinfoanuncio .Detalles #tabla{
     
@@ -117,26 +98,20 @@
 }
 
 .anuncio .Frameinfoanuncio .Detalles p{
-    
     padding-left: 1%;
 }
-
 
 .anuncio .Frameinfovendedor{
     display: flex;
     flex-direction: column;
     width: 300px;
     height: 546px;
-    
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
 
 .anuncio .Frameinfovendedor .imagenvendedor{
     flex-grow: 1;
     width: 100%;
-   
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
 
 } 
@@ -147,12 +122,8 @@
     height: auto;    
 }    
 
-
-
-
 .anuncio .Frameinfovendedor .infovendedor{
     flex-grow: 20;
-   /* border: 1px solid #000000;*/
     box-sizing: border-box;
     width:100%;
     height: auto;
@@ -174,16 +145,13 @@
     height: 71px;
     margin-top: 20px;
     margin-left: 550px;
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
 
 .anuncio .minigaleria .imagenes {
     flex-grow: 1;
-    /*border: 1px solid #000000;*/
     box-sizing: border-box;
 }
-
 
 @supports(object-fit: cover) {
     .anuncio .minigaleria .imagenes img {
