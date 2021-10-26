@@ -1,72 +1,90 @@
-.cajaPreview{
-    position: absolute;
-    width: 1501px;
-    height: 400px;
-    left: 170px;
-    top: 140px;
-
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 30px;
+.previewBox{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 22px;
 }
 
-img{
-    position: absolute;
+.previewBox .carPreview {
+    width: 100%;
+    height: 378px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #d1d1d1;
+    margin-top: 20px;
+    float: left;
+}
+
+.previewBox .carPreview .carPreviewImage {
     width: 359px;
     height: 292px;
-    left: 1052px;
-    top: 47px;
+    margin: 13px;
+    float: right;
+    vertical-align: middle;
+}
 
-    border: 1px solid #000000;
-    box-sizing: border-box;
+.previewBox .carPreview img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .previewBox .carPreview img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.previewBox .carPreview .carBoxInfo {
+    width: 1450px;
+    height: 150px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(150, 170, 144);
+    float: left;
+}
+
+.carPreview .carBoxInfo .brand {
+    font-size: 1.4em;
+    color: crimson;
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 10px;
+    float: left;
+}
+
+.carPreview .carBoxInfo .model {
+    font-size: 1.4em;
+    color: crimson;
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 10px;
+    float: left;
+}
+
+.carPreview .carBoxInfo .description {
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 30px;
+    float: left;
+}
+
+.carPreview .carBoxInfo .price {
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 1.4em;
+    height: 10px;
+    color: darkred;
+    float: right;
 }
 
 
-.marcaModelo{
-    position: absolute;
-    width: 290px;
-    height: 50px;
-    left: 66px;
-    top: 47px;
+.carPreview .button {
+    width: 99%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+    vertical-align: bottom;
+
 }
-
-.precio{
-    position: absolute;
-    width: 290px;
-    height: 50px;
-    left: 591px;
-    top: 47px;
-}
-
-.descripcion{
-    
-    position: absolute;
-    width: 815px;
-    height: 160px;
-    left: 66px;
-    top: 137px;
-}
-
-.masInfobtn{
-    
-    position: absolute;
-    width: 600px;
-    height: 45px;
-    left: 173px;
-    top: 337px;
-    background: #EFA6A6;
-    border-radius: 20px;
-}
-
-.precio, .descripcion, .marcaModelo, .masInfobtn{
-    border: 1px solid #000000;
-    box-sizing: border-box;
-
-    margin: auto;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-
-
