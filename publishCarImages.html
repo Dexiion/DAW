@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Estilos/homePage.css">
-    <link rel="stylesheet" href="Estilos/filteredCars.css">
-    <title></title>
+    <link rel="stylesheet" href="Estilos/publishCar.css">
+    <title>Publicar anuncio</title>
 </head>
 
 <body>
     <header>
         <div class="banner">
+            <div class="imagenbanner"></div>
             <div class="navigation">
                 <nav>
                     <ul>
@@ -25,21 +26,26 @@
         </div>
     </header>
     
-    <div class="previewBox">
-        <div class="carPreview">
-            <div class="carPreviewImage">
-                <img src="Imagenes/corsaBueno.jpg"/>
-            </div>
-            <div class="carBoxInfo">
-                <p class="brand"><b>Opel</b></p>
-                <p class="model">Corsa</p>
-                <p class="price"><b>3400€</b></p>
-                <div class="description">
-                    <p class="descText">Tremendo coche, perfecto para el dia a dia y todo lo que necesites, esta bien de motor y aguanta para otros 300.000km. No bajo precio, se lo que tengo</p>
-                </div>
+    <div class="carReg">
+        <div class="publishForm">
+            <form action="Home.html">
+                <div class="container">
+
+                    <h1>Creacion de anuncio</h1>
+                    <p>Complete su anuncio con las fotos de su vehiculo</p>
+                    <hr>
+
+                    <button type="button" class="publishbtn">Añadir fotos</button>
+
+                    <div class="carPreviewImage">
+                        <img src="Imagenes/corsaBueno.jpg"/>
+                    </div>
+
+                    <hr>
                 
-            </div>
-            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                    <button type="submit" class="publishbtn">Publicar</button>
+                </div>
+            </form>
         </div>
     </div>
 
