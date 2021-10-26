@@ -4,329 +4,417 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Estilos/homePage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <title></title>
 </head>
 <body>
     <header>
-        <div class="banner">
-            <div class="imagenbanner"></div>
-            <div class="navigation">
-                <nav>
-                    <ul>
-                        <li><div class="logo"><img src="Imagenes/logo.png" alt="Logo"></div></li>
-                        <li><a href="Home.html">Inicio</a></li>
-                        <li><a href="perfil.html">Mi Perfil</a></li>
-                        <li style="float:right"><div class="profile"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></div></li>
-                        <li style="float:right"><a class="active" href="#about">Publicar Anuncio</a></li>
-                    </ul>
-                </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <img src="Imagenes/banner.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="Home.html">
+                            <img src="Imagenes/logo.png" width="150" height="80" alt="">
+                          </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav me-auto">
+                          <li class="nav-item me-3 ms-5">
+                            <a class="nav-link" href="javascript:void(0)" style="font-size: 1.8em;">Inicio</a>
+                          </li>
+                          <li class="nav-item me-3">
+                            <a class="nav-link" href="javascript:void(0)" style="font-size: 1.8em;">Perfil</a>
+                          </li>
+                        </ul>
+                        <form class="d-flex align-items-center">
+                            <button type="button" class="btn btn-outline-danger me-5">Publicar Anuncio</button>
+                            <button type="button" class="btn btn-success d-table mx-auto" data-bs-toggle="modal" data-bs-target="#ModalForm">
+                                Iniciar Sesión
+                            </button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
             </div>
         </div>
     </header>
     
-    <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="Imagenes/avatar.png" alt="Avatar" class="avatar">
-          </div>
+    <div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <form action="">
+                <div class="modal-header">
+                  <h5 class="modal-title">Inicio de Sesión</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                      <label for="Username">Usuario<span class="text-danger">*</span></label>
+                      <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+                  </div>
       
-          <div class="container">
-            <label for="uname"><b>Usuario</b></label>
-            <input type="text" placeholder="Introduzca Nombre de Usuario" name="uname" required>
-      
-            <label for="psw"><b>Contraseña</b></label>
-            <input type="password" placeholder="Introduzca Contraseña" name="psw" required>
-              
-            <button type="submit" onclick="window.location.href='perfil.html'">Iniciar Sesión</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Recordarme
-            </label>
+                  <div class="mb-3">
+                      <label for="Password">Contraseña<span class="text-danger">*</span></label>
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+                  </div>
+                  <div class="mb-3">
+                      <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                      <label class="form-check-label" for="remember">Recordarme</label>
+                      <a href="#" class="float-end">Contraseña Olvidada</a>
+                  </div>
+                </div>
+                <div class="modal-footer pt-4">                  
+                  <button type="button" class="btn btn-success mx-auto w-100">Iniciar Sesión</button>
+                </div>
+                <p class="text-center">¿No tienes cuenta?, <a href="Register.html">Registrese</a></p> 
+            </form>
           </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">¿No está <a href="Register.html">registrado?</a></span>
-          </div>
-        </form>
+        </div>
       </div>
-    <section>
-        <div class="content">
-            <div class="cars">
-                <div class="outstanding">
-                    <div class="carPreview">
-                        <div class="carPreviewImage">
-                            <img src="Imagenes/opelcorsa.jpg"/>
-                        </div>
-                        <div class="carPreviewInfo">
-                            <p class="brand"><b>Opel</b></p>
-                            <p class="model">Corsa</p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">-56 km</p>
-                                <p class="location"><b>Las Palmas</b></p>
-                            </div>
-                            <p class="gearbox">Creo que si xd</p>
-                            <p class="price"><b>Dame billete</b></p>
-                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
-                        </div>
-                    </div>
-                    <div class="carPreview">
-                        <div class="carPreviewImage">
-                            <img src="Imagenes/coche2.jpg" />
-                        </div>
-                        <div class="carPreviewInfo">
-                            <p class="brand"><b>Opel</b></p>
-                            <p class="model">Corsa</p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location"><b>St. Cruz de Tenerife</b></p>
-                            </div>
-                            <p class="gearbox">Manual</p>
-                            <p class="price"><b>17.999,99€</b></p>
-                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
-                        </div>
-                    </div>
-                    <div class="carPreview">
-                        <div class="carPreviewImage">
-                            <img src="Imagenes/lamorghinicarton.jpg" />
-                        </div>
-                        <div class="carPreviewInfo">
-                            <p class="brand"><b>Opel</b></p>
-                            <p class="model">Corsa</p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location"><b>St. Cruz de Tenerife</b></p>
-                            </div>
-                            <p class="gearbox">Manual</p>
-                            <p class="price"><b>18.000€</b></p>
-                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
-                        </div>
-                    </div>
-                    <div class="carPreview">
-                        <div class="carPreviewImage">
-                            <img src="Imagenes/aberracion.jpg" />
-                        </div>
-                        <div class="carPreviewInfo">
-                            <p class="brand"><b>Aberración</b></p>
-                            <p class="model">Máxima</p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">999.999 km</p>
-                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
-                            </div>
-                            <p class="gearbox">Automatico</p>
-                            <p class="price"><b>Llevatelo por favor</b></p>
-                            <button class="button">Mas Info</button>
-                        </div>
-                    </div>
-                </div>
     
-                <div class="otherCars">
-                    <div class="otherCarsPreview">
-                        <div class="otherCarsPreviewImage">
-                            <img src="Imagenes/supra.jpg" />
-                        </div>
-                        <div class="otherCarsPreviewInfo">
-                            <p class="brand"><b>Opel Corsa</b></p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location"><b>Las Palmas</b></p>
+    <!-- Destacados -->
+
+    <section>
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-lg-8 ms-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="Imagenes/supra.jpg" />
+                                </div>
+                                <div class="card-heading">
+                                    Poyota
+                                </div>
+                                <div class="card-subheading">
+                                    Supra
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>112.000 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Caja de Cambios: <b>Manual</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    25.500€
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
                             </div>
-                            <p class="price">Sí</p>
-                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Caja de Cambios: <b>Manual</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Caja de Cambios: <b>Manual</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Caja de Cambios: <b>Manual</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="otherCarsPreview">
-                        <div class="otherCarsPreviewImage">
-                            <img src="Imagenes/supra.jpg" />
+                </div>
+
+                <!-- Filtros -->
+
+                <div class="col-lg-2 offset-lg-1 mt-5 border">
+                    <div class="row mb-3 px-lg-3 mt-4">
+                        <h5 style="text-align: center;">Provincia</h5>
+                        <select class="form-select" aria-label="Default select example" id="location">
+                            <option hidden >Provincia</option>
+                            <option value="1">Las Palmas</option>
+                            <option value="2">Santa Cruz de Tenerife</option>
+                            <option value="3">Barcelona</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3 px-lg-2">
+                        <h5 style="text-align: center;">Marca</h5>
+                        <select class="form-select" aria-label="Default select example">
+                            <option hidden >Marca</option>
+                            <option value="1">Volkswagen</option>
+                            <option value="2">BMW</option>
+                            <option value="3">Seat</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3 px-lg-2">
+                        <h5 style="text-align: center;">Combustible</h5>
+                        <select class="form-select" aria-label="Default select example">
+                            <option hidden >Combustible</option>
+                            <option value="1">Gasolina</option>
+                            <option value="2">Diesel</option>
+                            <option value="3">Electrico</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3 px-lg-2">
+                        <h5 style="text-align: center;">Precio</h5>
+                        <div class="col-lg-6">
+                            <select class="form-select" aria-label="Default select example">
+                                <option hidden >Min.</option>
+                                <option value="1">0</option>
+                                <option value="2">1000</option>
+                                <option value="3">2000</option>
+                            </select>
                         </div>
-                        <div class="otherCarsPreviewInfo">
-                            <p class="brand"><b>Opel Corsa</b></p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location"><b>St. Cruz de Tenerife</b></p>
-                            </div>
-                            <p class="price">26.750€</p>
-                            <button class="button" onclick="window.location.href='infocoche.html'">Mas Info</button>
+                        <div class="col-lg-6 px-lg-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option hidden >Min.</option>
+                                <option value="1">0</option>
+                                <option value="2">1000</option>
+                                <option value="3">2000</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="otherCarsPreview">
-                        <div class="otherCarsPreviewImage">
-                            <img src="Imagenes/supra.jpg" />
-                        </div>
-                        <div class="otherCarsPreviewInfo">
-                            <p class="brand"><b>Opel Corsa</b></p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                    <div class="row mb-3 px-lg-2">
+                        <h5 style="text-align: center;">Puertas</h5>
+                        <select class="form-select" aria-label="Default select example">
+                            <option hidden >Puertas</option>
+                            <option value="1">5 Puertas</option>
+                            <option value="2">3 Puertas</option>
+                            <option value="3">JAJA si</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3 px-lg-2">
+                        <button type="button" class="btn btn-danger">Filtrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Otros Coches -->
+
+            <div class="row mt-3 offset-lg-1">
+                <div class="col-lg-6 ms-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="Imagenes/supra.jpg" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
                             </div>
-                            <p class="price">26.750€</p>
-                            <button class="button">Mas Info</button>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="otherCarsPreview">
-                        <div class="otherCarsPreviewImage">
-                            <img src="Imagenes/supra.jpg" />
-                        </div>
-                        <div class="otherCarsPreviewInfo">
-                            <p class="brand"><b>Opel Corsa</b></p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
                             </div>
-                            <p class="price">26.750€</p>
-                            <button class="button">Mas Info</button>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="card-sl">
+                                <div class="card-image">
+                                    <img
+                                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                                </div>
+                                <div class="card-heading">
+                                    Audi
+                                </div>
+                                <div class="card-subheading">
+                                    Q8
+                                </div>
+                                <div class="card-text">
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Km: <b>-56 Km</b></p>
+                                    <p style="font-size: 1.1em; margin-top: -10px;">Provincia: <b>Las Palmas</b></p>  
+                                </div>
+                                <div class="card-price">
+                                    $67,400
+                                </div>
+                                <a href="#" class="card-button"> Purchase</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="otherCarsPreview">
-                        <div class="otherCarsPreviewImage">
-                            <img src="Imagenes/supra.jpg" />
-                        </div>
-                        <div class="otherCarsPreviewInfo">
-                            <p class="brand"><b>Opel Corsa</b></p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
-                            </div>
-                            <p class="price">26.750€</p>
-                            <button class="button">Mas Info</button>
-                        </div>
-                    </div>
-                    <div class="otherCarsPreview">
-                        <div class="otherCarsPreviewImage">
-                            <img src="Imagenes/supra.jpg" />
-                        </div>
-                        <div class="otherCarsPreviewInfo">
-                            <p class="brand"><b>Opel Corsa</b></p>
-                            <div class="kmandlocation">
-                                <p class="kilometres">128.000 km</p>
-                                <p class="location" onclick="window.location.href='infocoche.html'"><b>St. Cruz de Tenerife</b></p>
-                            </div>
-                            <p class="price">26.750€</p>
-                            <button class="button">Mas Info</button>
+                </div>
+
+                <!-- Anuncio -->
+
+                <div class="col-lg-3 offset-lg-2">
+                    <div class="row mt-6" style="float: right;">
+                        <div class="adImage mt-6">
+                            <a href="https://www.youtube.com/watch?v=PyoRdu-i0AQ">
+                                <img src="Imagenes/ad.gif">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
-    <aside>
-        <div class="filters">
-            <div class="selector">
-                <label for="locationSelector">Provincia</label>
-                <select id="locationSelector">
-                    <option>
-                        Las Palmas
-                    </option>
-                    <option>
-                        Santa Cruz de Tenerife
-                    </option>
-                    <option>
-                        Barcelona
-                    </option>
-                </select>
-            </div>
-            <div class="selector">
-                <label for="brandSelector">Marca</label>
-                <select id="brandSelector">
-                    <option>
-                        Volkswagen
-                    </option>
-                    <option>
-                        BMW
-                    </option>
-                    <option>
-                        Seat
-                    </option>
-                </select>
-            </div>
-            <div class="selector">
-                <label for="fuelSelector">Combustible</label>
-                <select id="fuelSelector">
-                    <option>
-                        Gasolina
-                    </option>
-                    <option>
-                        Diesel
-                    </option>
-                    <option>
-                        Electrico
-                    </option>
-                </select>
-            </div>
-            <div class="priceSelector">
-                <div class="title">
-                    Precio
-                </div>
-                <div class="priceRange">
-                    <div class="minPrice">
-                        <label for="minPrice">Min.</label>
-                        <select id="minPice">
-                            <option>
-                                0
-                            </option>
-                            <option>
-                                1000
-                            </option>
-                            <option>
-                                2000
-                            </option>
-                            <option>
-                                3000
-                            </option>
-                        </select>
-                    </div>
-                    <div class="maxPrice">
-                        <label for="maxPrice">Max.</label>
-                        <select id="maxPice">
-                            <option>
-                                0
-                            </option>
-                            <option>
-                                1000
-                            </option>
-                            <option>
-                                2000
-                            </option>
-                            <option>
-                                3000
-                            </option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="selector">
-                <label for="doorSelector">Puertas</label>
-                <select id="doorSelector">
-                    <option>
-                        5 Puertas
-                    </option>
-                    <option>
-                        3 Puertas
-                    </option>
-                    <option>
-                        Si
-                    </option>
-                </select>
-            </div>
-            <div class="filterButton">
-                <button onclick="window.location.href='filteredCars.html'">Filtrar</button>
-            </div>
-        </div>
-        <div class="ads">
-            <a href="https://www.youtube.com/watch?v=PyoRdu-i0AQ" target="_blank" rel="noopener noreferrer"><img src="Imagenes/ad.gif"/></a>
-        </div>
-    </aside>
-    <footer class="footer">
-        <div class="footerTitle"><b>AutoCanaria</b></div>
-        <div class="footerDescription"><p style="font-size: 1.5em;">Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <p style="font-size: 1em;">Correo: estoesuncorreototalmentereal@autocanaria.com</p>
-            <p style="font-size: 1em;">Oficinas: C/ Avenida de Tucuman Nº 333</p>
-            <p style="font-size: 1em;">Telefono: 928 420 696</p>
-        </div>
-        <div class="footerCopyright">
-            <p>copyright &copy;2021 <a href="#">AutoCanaria</a>  </p>
-        </div>
-    </footer>
+
+    <!-- Footer -->
+
+    <div class="footer-basic mt-5">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">AutoCanaria © 2021</p>
+        </footer>
+    </div>
 
     <script>
         var modal = document.getElementById('id01');
@@ -336,6 +424,7 @@
                 modal.style.display = "none";
             }
         }
-        </script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
