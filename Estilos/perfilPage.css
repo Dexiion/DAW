@@ -16,7 +16,7 @@
 
 }
 
-.perfil .Framefoto{
+ .Framefoto{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -24,38 +24,35 @@
     box-sizing: border-box;
 }
 
-.perfil .Framedetalles {
-    margin: 30px;
-    width: 500px;
+.Framedetalles {
+
     background-color: whitesmoke;
     flex-grow: 3;
     box-sizing: border-box;
 }
 
-.perfil .Framedetalles .profileElement {
+.Framedetalles .profileElement {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 200px;
     margin-bottom: 40px;
-    width: 400px;
-    height: 85px;
+ 
     float: left;
 }
 
-.perfil .Framedetalles .profileElement .elementTitle{
+.Framedetalles .profileElement .elementTitle{
     margin-left: 20px;
     margin-top: -15px;
     font-size: 1.8em;
 }
 
-.perfil .Framedetalles .profileElement .elementContent{
+ .Framedetalles .profileElement .elementContent{
     margin-left: 30px;
     margin-top: -15px;
     font-size: 1.3em;
 }
-
-.perfil .Framedetalles .profileElement hr{
-    width: 500px;
+.profileElement hr{
+    
     height:1px;
     border-width:0;
     background-color:rgb(247, 103, 103)
@@ -80,11 +77,11 @@
     margin-left: 40%;
 }
 
-.perfil .Framefoto .perfilfoto img{
-    width: auto;
+.Framefoto .perfilfoto .imagen img{
+    width: 25rem;
     height: 100%;
-    margin-left: 25%; 
+}
 
     
-}
+
 
