@@ -358,17 +358,8 @@ a {
 
 
 
-.texto h6{
-font-size: large;
-
+.imagenBanner { 
+  margin: 0;
+  padding: 0;
 }
 
-.texto label{
-  font-size: large;
-  
-  }
-  
-.texto h6{
-  font-size: large;
-  
-  }
