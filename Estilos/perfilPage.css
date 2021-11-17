@@ -68,3 +68,8 @@ body {
       font-size: large;
       
       }
+
+      
+      input[type=text]:disabled {
+        background:white;
+    }
