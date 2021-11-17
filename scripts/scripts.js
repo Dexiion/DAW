@@ -51,7 +51,7 @@ var createOutstandingCarCard = function(coche) {
                                     <div class=\"card-price\"> \
                                         {{Precio}}€ \
                                     </div> \
-                                    <a href=\"#\" class=\"card-button\"> Purchase</a> \
+                                    <a href=\"infocoche.html\" class=\"card-button\"> Purchase</a> \
                                 </div> \
                             </div> \
                         </div>";
@@ -78,7 +78,7 @@ var createOutstandingCarCard = function(coche) {
                                 <div class=\"card-price\"> \
                                     {{Precio}}€ \
                                 </div> \
-                                <a href=\"#\" class=\"card-button\"> Purchase</a> \
+                                <a href=\"infocoche.html\" class=\"card-button\"> Purchase</a> \
                             </div> \
                         </div> \
                     </div>";
