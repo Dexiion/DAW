@@ -1,4 +1,9 @@
-.previewBox{
+.imgCoche{
+    width: 150px;
+    height: 150px;
+}
+
+/* .previewBox{
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 22px;
@@ -14,6 +19,8 @@
     float: left;
 }
 
+
+
 .previewBox .carPreview .carPreviewImage {
     width: 359px;
     height: 292px;
@@ -22,13 +29,13 @@
     vertical-align: middle;
 }
 
-.previewBox .carPreview img {
+.carPreviewImage img {
     width: 100%;
     height: auto;
 }
 
 @supports(object-fit: cover) {
-    .previewBox .carPreview img {
+    .carPreviewImage img {
         height: 100%;
         object-fit: cover;
         object-position: center center;
@@ -87,4 +94,4 @@
     margin-top: 2px;
     vertical-align: bottom;
 
-}
+} */
