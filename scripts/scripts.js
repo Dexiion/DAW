@@ -123,3 +123,7 @@ $(document).ready(function() {
     });
 });
 
+var submitFilterForm = function() {
+    document.getElementById("filterForm").submit();
+}
+

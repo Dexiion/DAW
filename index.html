@@ -7,7 +7,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script><script src="scripts/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script src="scripts/scripts.js"></script>
         <title></title>
     </head>
     <body>
@@ -112,74 +113,76 @@
                     <!-- Filtros -->
 
                     <div class="col-lg-3 col-8 offset-lg-1 mt-5 ms-lg-5 border">
-                        <div class="row mb-3 px-lg-2 mt-4">
-                            <h5 style="text-align: center;">Provincia</h5>
-                            <div class="col-12">
-                                <select class="form-select" aria-label="Default select example" id="location">
-                                    <option hidden >Provincia</option>
-                                    <option value="1">Las Palmas</option>
-                                    <option value="2">Santa Cruz de Tenerife</option>
-                                    <option value="3">Barcelona</option>
-                                </select>
+                        <form action="filteredCars.html" method="get" id="filterForm">
+                            <div class="row mb-3 px-lg-2 mt-4">
+                                <h5 style="text-align: center;">Provincia</h5>
+                                <div class="col-12">
+                                    <select class="form-select" aria-label="Default select example" id="location" name="location">
+                                        <option hidden >Provincia</option>
+                                        <option value="Las_Palmas">Las Palmas</option>
+                                        <option value="Santa_Cruz_de_Tenerife">Santa Cruz de Tenerife</option>
+                                        <option value="Barcelona">Barcelona</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3 px-lg-2">
-                            <h5 style="text-align: center;">Marca</h5>
-                            <div class="col-12">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option hidden >Marca</option>
-                                    <option value="1">Volkswagen</option>
-                                    <option value="2">BMW</option>
-                                    <option value="3">Seat</option>
-                                </select>
+                            <div class="row mb-3 px-lg-2">
+                                <h5 style="text-align: center;">Marca</h5>
+                                <div class="col-12">
+                                    <select class="form-select" aria-label="Default select example" id="brand" name="brand">
+                                        <option hidden >Marca</option>
+                                        <option value="Volkswagen">Volkswagen</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Seat">Seat</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3 px-lg-2">
-                            <h5 style="text-align: center;">Combustible</h5>
-                            <div class="col-12">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option hidden >Combustible</option>
-                                    <option value="1">Gasolina</option>
-                                    <option value="2">Diesel</option>
-                                    <option value="3">Electrico</option>
-                                </select>
+                            <div class="row mb-3 px-lg-2">
+                                <h5 style="text-align: center;">Combustible</h5>
+                                <div class="col-12">
+                                    <select class="form-select" aria-label="Default select example" id="fuel" name="fuel">
+                                        <option hidden >Combustible</option>
+                                        <option value="Gasolina">Gasolina</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="Electrico">Electrico</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3 px-lg-2">
-                            <h5 style="text-align: center;">Precio</h5>
-                            <div class="col-lg-6 mb-2">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option hidden >Min.</option>
-                                    <option value="1">0</option>
-                                    <option value="2">1000</option>
-                                    <option value="3">2000</option>
-                                </select>
+                            <div class="row mb-3 px-lg-2">
+                                <h5 style="text-align: center;">Precio</h5>
+                                <div class="col-lg-6 mb-2">
+                                    <select class="form-select" aria-label="Default select example" id="minprice" name="minprice">
+                                        <option hidden >Min.</option>
+                                        <option value="0">0</option>
+                                        <option value="1000">1000</option>
+                                        <option value="2000">2000</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 px-lg-2">
+                                    <select class="form-select" aria-label="Default select example" id="maxprice" name="maxprice">
+                                        <option hidden >Max.</option>
+                                        <option value="0">0</option>
+                                        <option value="1000">1000</option>
+                                        <option value="2000">2000</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-6 px-lg-2">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option hidden >Max.</option>
-                                    <option value="1">0</option>
-                                    <option value="2">1000</option>
-                                    <option value="3">2000</option>
-                                </select>
+                            <div class="row mb-3 px-lg-2">
+                                <h5 style="text-align: center;">Puertas</h5>
+                                <div class="col-12">
+                                    <select class="form-select" aria-label="Default select example" id="doors" name="doors">
+                                        <option hidden >Puertas</option>
+                                        <option value="5">5 Puertas</option>
+                                        <option value="3">3 Puertas</option>
+                                        <option value="xd">JAJA si</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3 px-lg-2">
-                            <h5 style="text-align: center;">Puertas</h5>
-                            <div class="col-12">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option hidden >Puertas</option>
-                                    <option value="1">5 Puertas</option>
-                                    <option value="2">3 Puertas</option>
-                                    <option value="3">JAJA si</option>
-                                </select>
+                            <div class="row mb-3 px-lg-2">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-danger" onClick="submitFilterForm()">Filtrar</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3 px-lg-2">
-                            <div class="col-12">
-                                <button type="button" class="btn btn-danger">Filtrar</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
