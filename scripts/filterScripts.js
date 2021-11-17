@@ -1,7 +1,11 @@
 $(document).ready(function() {
     var params = getQueryParams();
     if(params.get('location') == 'Provincia' && params.get('brand') == 'Marca' && params.get('fuel') == 'Combustible' && params.get('minprice') == 'Min.' && params.get('maxprice') == 'Max.' && params.get('doors') == 'Puertas') {
-        var text = "<p id=\"noFilteredCars\">NO HA SELECCIONADO NINGUN FILTRO</p>";
+        var text = "<div class=\"col-10 mt-5 justify-content-center\"> \
+        <div class=\"alert alert-primary h2 text-center\" role=\"alert\"> \
+            No ha seleccionado ningun filtro \
+        </div>\
+    </div>";
         $('#filteredCars').append(text);
     } else {
         getFilteredCars(params)
@@ -37,7 +41,13 @@ var getFilteredCars = function(params) {
                 createFilteredCar(carData);
             });
         } else {
-            var text = "<p id=\"noFilteredCars\">NO HAY COCHES PARA LA BUSQUEDA SELECCIONADA</p>";
+            // var text = "<p id=\"noFilteredCars\">NO HAY COCHES PARA LA BUSQUEDA SELECCIONADA</p>";
+            var text = "<div class=\"col-10 mt-5 justify-content-center\"> \
+                            <div class=\"alert alert-primary h2 text-center\" role=\"alert\"> \
+                                No hay coches a mostrar para la busqueda seleccionada \
+                            </div>\
+                        </div>";
+            
             $('#filteredCars').append(text);
         }
     });
