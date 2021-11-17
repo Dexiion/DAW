@@ -1,0 +1,35 @@
+.mt-6, .my-6 {
+    padding-top: 5rem !important;
+}
+
+.mr-6, .mx-6 {
+padding-right: 5rem !important;
+}
+
+.mb-6, .my-6 {
+padding-bottom: 5rem !important;
+}
+
+.ml-6, .mx-6 {
+padding-left: 5rem !important;
+}
+
+.mt-10, .my-10 {
+padding-top: 8rem !important;
+}
+
+.mr-10, .mx-10 {
+padding-right: 8rem !important;
+}
+
+.mb-10, .my-10 {
+padding-bottom: 8rem !important;
+}
+
+.ml-10, .mx-10 {
+padding-left: 8rem !important;
+}
+
+.paginationNav {
+    margin-left: -2rem !important;
+}
