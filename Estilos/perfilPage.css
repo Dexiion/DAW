@@ -1,87 +1,70 @@
-.perfilPage {
-    min-height: 600px;
-}
-
-.perfil {
-    display: flex;
-    flex-direction: row;
-
-    width: 1850px;
-    height: 549px;
-
-    margin-top: 30px;
-    margin-left: 20px;
-
-    background: lightgray;
-
-}
-
- .Framefoto{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: #333;
-    box-sizing: border-box;
-}
-
-.Framedetalles {
-
-    background-color: whitesmoke;
-    flex-grow: 3;
-    box-sizing: border-box;
-}
-
-.Framedetalles .profileElement {
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 200px;
-    margin-bottom: 40px;
- 
-    float: left;
-}
-
-.Framedetalles .profileElement .elementTitle{
-    margin-left: 20px;
-    margin-top: -15px;
-    font-size: 1.8em;
-}
-
- .Framedetalles .profileElement .elementContent{
-    margin-left: 30px;
-    margin-top: -15px;
-    font-size: 1.3em;
-}
-.profileElement hr{
-    
-    height:1px;
-    border-width:0;
-    background-color:rgb(247, 103, 103)
-}
-
-
-.perfil .Framefoto .perfilfoto{
-    margin-top: 10%;
-    flex-grow: 2;
-    box-sizing: border-box;
-}
-
-.perfil .Framefoto .botoncambiarfoto{
-    margin-bottom: 15%;
-    flex-grow: 1;
-    box-sizing: border-box;
-}
-
-.perfil .Framefoto .botoncambiarfoto .button{
-    margin-top: 10% ;
-    width: 25%;
-    margin-left: 40%;
-}
-
-.Framefoto .perfilfoto .imagen img{
-    width: 25rem;
+body {
+    margin: 0;
+    padding-top: 40px;
+    color: #2e323c;
+    background: #f5f6fa;
+    position: relative;
     height: 100%;
 }
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
 
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+.account-settings .user-profile h6.user-email {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #9fa8b9;
+}
+.nombre {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+.account-settings .about h5 {
+    margin: 0 0 15px 0;
+    color: #007ae1;
+}
+.account-settings .about p {
+    font-size: 0.825rem;
+}
+.form-control {
+    border: 1px solid #cfd1d8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #ffffff;
+    color: #2e323c;
+}
+
+.card {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+.texto h6{
+    font-size: large;
     
-
-
+    }
+    
+    .texto label{
+      font-size: large;
+      
+      }
+      
+    .texto h6{
+      font-size: large;
+      
+      }
