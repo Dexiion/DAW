@@ -1,0 +1,26 @@
+[
+    {
+        "ID": "1",
+        "Email": "pierregaslyf1@email.com",
+        "Usuario": "u1",
+        "Contraseña": "e6481bf462cc0d635fa10c3ce4ee3603",
+        "NombreApellidos": "David sosa Santa",
+        "Telefono": "123456789",
+        "FechaNacimiento": "1542-11-01",
+        "Localizacion": "Yemen",
+        "CodigoPostal": "22743",
+        "Imagen": "Imagenes\/usuario.png"
+    },
+    {
+        "ID": "2",
+        "Email": "joseph_antony@gmail.gob",
+        "Usuario": "jantony",
+        "Contraseña": "e6481bf462cc0d635fa10c3ce4ee3603",
+        "NombreApellidos": "Joseph Antony",
+        "Telefono": "777777777",
+        "FechaNacimiento": "2021-11-16",
+        "Localizacion": "Niviru City",
+        "CodigoPostal": "2203",
+        "Imagen": "Imagenes\/avatar.png"
+    }
+]

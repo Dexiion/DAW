@@ -4,9 +4,13 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="Estilos/homePage.css">
-        <link rel="stylesheet" href="Estilos/publishCar.css">
+        <link rel="stylesheet" href="Estilos/filteredCars.css">
+        <link rel="stylesheet" href="Estilos/cochesPage.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script src="scripts/coches.js"></script>
         <title></title>
     </head>
 
@@ -59,31 +63,23 @@
             </div>
         </header>
         
-        <div class="carReg">
-            <div class="publishForm">
-                <form action="publishCarImages.html">
-                    <div class="container">
-                        <h1>Creacion de anuncio</h1>
-                        <p>Rellene con los detalles del vehiculo</p>
-                        <hr>
-                        <label for="power"><b>Potencia del vehiculo</b><br></label>
-                        <input type="text" placeholder="Introduzca potencia del vehiculo" name="power" id="power" required><br>
-                    
-                        <label for="color"><b>Color</b></label>
-                        <input type="text" placeholder="Introduzca color del vehiculo" name="color" id="color" required>
-                    
-                        <label for="door"><b>Puertas</b><br></label>
-                        <input type="text" placeholder="Introduzca numero de puertas del vehiculo" name="door" id="door" required><br>
-                    
-                        <label for="desc"><b>Descripcion detallada</b></label>
-                        <textarea rows="5" name="desc" id="desc" required> </textarea>
+        <div class="container-fluid p-0">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-10"> 
+                    <div class="row justify-content-center" id="allCars">
 
-                        <hr>
-                    
-                        <button type="submit" class="nextbtn">Siguiente</button>
                     </div>
-                </form>
+                </div>
+            </div>
+            <div class="row mt-5 paginationNav">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" id="btn_prev" href="javascript:prevPage()">Previous</a></li>
+                        <li class="page-item"><a class="page-link"><span id="page"></span></a></li>
+                        <li class="page-item"><a class="page-link" id="btn_next" href="javascript:nextPage()">Next</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </body>
-</html> 
+</html>

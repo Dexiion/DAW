@@ -38,6 +38,9 @@
                                         <li class="nav-item me-3 lg-ms-5">
                                             <a class="nav-link" href="index.html" style="font-size: 1.8em;">Inicio</a>
                                         </li>
+                                        <li class="nav-item me-3 lg-ms-5">
+                                            <a class="nav-link" href="coches.html" style="font-size: 1.8em;">Coches</a>
+                                        </li>
                                         <li class="nav-item me-3">
                                             <a class="nav-link" href="perfil.html" style="font-size: 1.8em;">Perfil</a>
                                         </li>
@@ -60,7 +63,7 @@
         <div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <form action="">
+                <form action="" id="perfilForm">
                     <div class="modal-header">
                     <h5 class="modal-title">Inicio de Sesión</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -68,12 +71,18 @@
                     <div class="modal-body">
                     <div class="mb-3">
                         <label for="Username">Usuario<span class="text-danger">*</span></label>
-                        <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+                        <input type="text" name="username" class="form-control" id="Username" placeholder="Introduzca Usuario" required>
                     </div>
         
                     <div class="mb-3">
                         <label for="Password">Contraseña<span class="text-danger">*</span></label>
-                        <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+                        <input type="password" name="password" class="form-control" id="Password" placeholder="Introduzca Contraseña" required>
+                    </div>
+                    <div id="wrongUser">
+                        <!-- <div class="alert alert-danger alert-dismissible fade show">
+                            <strong>Error!</strong> A problem has been occurred while submitting your data.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div> -->
                     </div>
                     <div class="mb-3">
                         <input class="form-check-input" type="checkbox" value="" id="remember" required>
@@ -82,7 +91,7 @@
                     </div>
                     </div>
                     <div class="modal-footer pt-4">                  
-                    <button type="button" class="btn btn-success mx-auto w-100">Iniciar Sesión</button>
+                    <button type="button" class="btn btn-success mx-auto w-100" onClick="checkLogging()">Iniciar Sesión</button>
                     </div>
                     <p class="text-center">¿No tienes cuenta?, <a href="Register.html">Registrese</a></p> 
                 </form>
@@ -260,7 +269,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-4 justify-content-center">
+                        <div class="row mt-lg-4 justify-content-center">
                             <div class="col-lg-3 ">
                                 <div class="card-sl mb-3 mb-lg-0">
                                     <div class="card-image">
@@ -332,8 +341,8 @@
 
                     <!-- Anuncio -->
 
-                    <div class="col-lg-3 offset-lg-2">
-                        <div class="row mt-6" style="float: right;">
+                    <div class="col-lg-3 offset-lg-2 text-center">
+                        <div class="row mt-6">
                             <div class="adImage mt-6">
                                 <a href="https://www.youtube.com/watch?v=PyoRdu-i0AQ">
                                     <img src="Imagenes/ad.gif">
