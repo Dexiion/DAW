@@ -22,3 +22,30 @@ body{
     color: #8898aa;
 }
 
+
+.card-image-anuncio img {
+    justify-content: center;
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0;
+}
+
+
+@media (min-width: 0px) {  
+    .card-image-anuncio img {
+      width: 100%;
+      height: 50vw;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0;
+    }
+    }
+
+@media (min-width: 992px) { 
+.card-image-anuncio img {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0;
+}
+}
