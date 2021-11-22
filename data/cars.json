@@ -2,19 +2,19 @@
     {
         "ID": "1",
         "IDUsuario": "1",
-        "Marca": "Samu",
-        "Modelo": "Papada",
-        "Matriculacion": "2005-07-01",
+        "Marca": "Ferrari",
+        "Modelo": "QuitaNieves",
+        "Matriculacion": "1950-07-01",
         "Kilometros": "12000",
         "Cilindrada": "1800",
         "Combustible": "Gasolina",
         "Localizacion": "Las Palmas",
         "Potencia": "0",
-        "Color": "Muy Negro",
-        "Puertas": "15",
+        "Color": "Rojo",
+        "Puertas": "1",
         "CajaDeCambios": "Pedales",
-        "Descripcion": "Samu papada jaja",
-        "Precio": "-21474",
+        "Descripcion": "Es una joya familiar, traida de la siberia profunda. Buen control en terrenos adversos, cadena incluida.",
+        "Precio": "30000",
         "Destacado": "1"
     },
     {
@@ -28,16 +28,17 @@
         "Combustible": "Electrico",
         "Localizacion": "No se donde esta xd",
         "Potencia": "0",
-        "Color": "Caca",
+        "Color": "Gris",
         "Puertas": "0",
         "CajaDeCambios": "Pedales",
-        "Descripcion": "JAja xd",
+        "Descripcion": "ITV recién pasada hasta finales octubre 2022,ruedas delanteras ,axiales  y rotulas cambiadas hace poco.El aire necesita una recarga estuvo funcionando hasta no hace mucho ya que fue reparado en su momento.",
         "Precio": "1",
         "Destacado": "1"
     },
     {
         "ID": "4",
         "Marca": "Volkswagen",
+        "IDUsuario": "1",
         "Modelo": "Golf V",
         "Matriculacion": "2012-11-09",
         "Kilometros": "149000",
@@ -55,6 +56,7 @@
     {
         "ID": "5",
         "Marca": "Seat",
+        "IDUsuario": "2",
         "Modelo": "Leon",
         "Matriculacion": "2013-11-01",
         "Kilometros": "210000",
@@ -72,6 +74,7 @@
     {
         "ID": "6",
         "Marca": "Toyota",
+        "IDUsuario": "1",
         "Modelo": "Supra",
         "Matriculacion": "2004-11-05",
         "Kilometros": "95000",
@@ -89,6 +92,7 @@
     {
         "ID": "7",
         "Marca": "Lamborghini",
+        "IDUsuario": "2",
         "Modelo": "Carton",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -106,6 +110,7 @@
     {
         "ID": "8",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -123,6 +128,7 @@
     {
         "ID": "9",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -140,6 +146,7 @@
     {
         "ID": "10",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -157,6 +164,7 @@
     {
         "ID": "11",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -174,6 +182,7 @@
     {
         "ID": "12",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -191,6 +200,7 @@
     {
         "ID": "13",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -208,6 +218,7 @@
     {
         "ID": "14",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -225,6 +236,7 @@
     {
         "ID": "15",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -242,6 +254,7 @@
     {
         "ID": "16",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -259,6 +272,7 @@
     {
         "ID": "17",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -276,6 +290,7 @@
     {
         "ID": "18",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -293,6 +308,7 @@
     {
         "ID": "19",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -310,6 +326,7 @@
     {
         "ID": "20",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -327,6 +344,7 @@
     {
         "ID": "21",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -344,6 +362,7 @@
     {
         "ID": "22",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -361,6 +380,7 @@
     {
         "ID": "23",
         "Marca": "Opel",
+        "IDUsuario": "2",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
@@ -378,6 +398,7 @@
     {
         "ID": "24",
         "Marca": "Opel",
+        "IDUsuario": "1",
         "Modelo": "Corsa",
         "Matriculacion": "2021-11-09",
         "Kilometros": "100",
