@@ -170,27 +170,36 @@ var createInfoCar = function(){
 } 
 
 var createCarousel = function(){
-    imagesLinks.forEach(image => {
-        
+
+    if(imagesLinks.length > 0){
+        imagesLinks.forEach(image => {
+            var firstImage = "<div class=\"carousel-item active\"> \
+                <div class=\"card-image-anuncio\"> \
+                    <img src=\"" + image + "\"> \
+                </div>    \
+            </div>";
+
+            var otherImage = "<div class=\"carousel-item\"> \
+                <div class=\"card-image-anuncio img\"> \
+                    <img src=\"" + image + "\"> \
+                </div>    \
+            </div>";    
+            if (counter == 1){
+                $('#Imagenes').append(firstImage);
+                counter--;
+            }else{
+                $('#Imagenes').append(otherImage);
+            }
+        });
+    }else{
         var firstImage = "<div class=\"carousel-item active\"> \
-            <div class=\"card-image-anuncio\"> \
-                <img src=\"" + image + "\"> \
-            </div>    \
-        </div>";
+                <div class=\"card-image-anuncio\"> \
+                    <img src=\"../Imagenes/defaultCar.png\"> \
+                </div>    \
+            </div>";
+        $('#Imagenes').append(firstImage);
 
-        var otherImage = "<div class=\"carousel-item\"> \
-            <div class=\"card-image-anuncio\"> \
-                <img src=\"" + image + "\"> \
-            </div>    \
-        </div>";    
-        if (counter == 1){
-            $('#Imagenes').append(firstImage);
-            counter--;
-        }else{
-            $('#Imagenes').append(otherImage);
-        }
-    });
-
+    }
     
 }
 
