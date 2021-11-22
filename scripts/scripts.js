@@ -135,6 +135,7 @@ var checkLogging = function() {
             var data = cuentas.filter( cuenta => cuenta.Usuario == username && cuenta.Contraseña == password);
     
             if (data.length > 0) {
+                document.getElementById("id").value = data[0].ID;
                 document.getElementById("perfilForm").submit();
             } else {
                 $('#wrongPasswordAlert').remove();

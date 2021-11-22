@@ -63,7 +63,7 @@
         <div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <form action="" id="perfilForm">
+                <form action="" method="get" id="perfilForm">
                     <div class="modal-header">
                     <h5 class="modal-title">Inicio de Sesión</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -72,6 +72,7 @@
                     <div class="mb-3">
                         <label for="Username">Usuario<span class="text-danger">*</span></label>
                         <input type="text" name="username" class="form-control" id="Username" placeholder="Introduzca Usuario" required>
+                        <input type="text" name="id" id="id" hidden>
                     </div>
         
                     <div class="mb-3">
