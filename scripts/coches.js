@@ -66,7 +66,7 @@ function changePage(page)
                             </div> \
                         </div> \
                         <div class=\"courses-detail\"> \
-                            <h3><a href=\"car-details.html\" class=\"carTitle\">" + outstandingIcon + " " + objJson[i].Marca + " " + objJson[i].Modelo + "</a></h3> \
+                            <h3><a href=\"infocoche.html?carid=" + objJson[i].ID + "\"class=\"carTitle\">" + outstandingIcon + " " + objJson[i].Marca + " " + objJson[i].Modelo + "</a></h3> \
                             <p class=\"lead\"><strong><b>" + objJson[i].Precio + "€</b></strong></p> \
                             <p>"+ objJson[i].Potencia +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Combustible +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Puertas + " Puertas &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Localizacion + "</p> \
                             <p>" + descripcion + "</p> \
