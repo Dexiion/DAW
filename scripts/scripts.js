@@ -15,6 +15,7 @@ var loadJson = function () {
             }
 
             if (coche.Destacado != 1 && otherCarsCounter < 6) {
+                console.log(coche);
                 getImageLink(coche.ID);
                 createOtherCarCard(coche);
             }
