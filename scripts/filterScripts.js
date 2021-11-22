@@ -123,7 +123,6 @@ function changePage(page)
             if (objJson[i].Destacado == 1) {
                 outstandingIcon = "<i class=\"icon ion-ios-star\"> Destacado</i>";
             }
-            console.log(outstandingIcon);
             filteredCars.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
             <div class=\"row\"> \
                 <div class=\"col-lg-8 col-sm-6 \"> \
