@@ -118,16 +118,14 @@ function changePage(page)
 
     for (var i = (page-1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
         if (count == 1) {
-            getImageLink(objJson[i].ID);
             filteredCars.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
             <div class=\"row\"> \
-                <div class=\"col-lg-8 \"> \
+                <div class=\"col-lg-8 col-sm-6 \"> \
                     <div class=\"row \"> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 marca\"> \
                             <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
-                        <div class=\"col-4\"></div> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 precio justify-content-end\"> \
                             <p>" + objJson[i].Precio +"€</p> \
                         </div> \
                     </div> \
@@ -135,25 +133,23 @@ function changePage(page)
                         objJson[i].Descripcion +
                     " </div> \
                 </div> \
-                <div class=\"col-lg-4\"> \
-                    <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
+                <div class=\"col-lg-4 col-sm-6\"> \
+                    <img class=\"imgCoche d-flex justify-content-end\" src=\"Imagenes/corsaBueno.jpg\"/> \
                 </div> \
-                <div class=\"row\"> \
-                    <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
+                <div class=\"row p-0\"> \
+                    <button class=\"button\" onclick=\"window.location.href='infocoche.html'\">Mas Info</button> \
                 </div> \
             </div>";
             count--;
         } else {
-            getImageLink(objJson[i].ID);
             filteredCars.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 ms-lg-5\"> \
             <div class=\"row\"> \
-                <div class=\"col-lg-8 \"> \
+                <div class=\"col-lg-8 col-sm-6\"> \
                     <div class=\"row \"> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 marca\"> \
                             <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
-                        <div class=\"col-4\"></div> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 precio justify-content-end\"> \
                             <p>" + objJson[i].Precio +"€</p> \
                         </div> \
                     </div> \
@@ -161,11 +157,11 @@ function changePage(page)
                         objJson[i].Descripcion +
                     " </div> \
                 </div> \
-                <div class=\"col-lg-4\"> \
-                    <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
+                <div class=\"col-lg-4 col-sm-6\"> \
+                    <img class=\"imgCoche d-flex justify-content-end\" src=\"Imagenes/corsaBueno.jpg\"/> \
                 </div> \
-                <div class=\"row\"> \
-                    <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
+                <div class=\"row p-0\"> \
+                    <button class=\"button\" onclick=\"window.location.href='infocoche.html'\">Mas Info</button> \
                 </div> \
             </div>";
             count++;       
