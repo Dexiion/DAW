@@ -1,3 +1,8 @@
+var current_page = 1;
+var records_per_page = 10;
+
+var objJson = []; 
+
 $(document).ready(function() {
     var params = getQueryParams();
     if(params.get('location') == 'Provincia' && params.get('brand') == 'Marca' && params.get('fuel') == 'Combustible' && params.get('minprice') == 'Min.' && params.get('maxprice') == 'Max.' && params.get('doors') == 'Puertas') {
@@ -8,7 +13,13 @@ $(document).ready(function() {
     </div>";
         $('#filteredCars').append(text);
     } else {
-        getFilteredCars(params)
+        $.ajaxSetup({
+            async: false
+        });
+        getFilteredCars(params);
+        $.ajaxSetup({
+            async: true
+        });
     }
 });
 
@@ -31,6 +42,7 @@ var getFilteredCars = function(params) {
     var preciomin = formatParams(params.get('minprice'));
     var preciomax = formatParams(params.get('maxprice'));
     var puertas = formatParams(params.get('doors'));
+    var navigationFilteredCars = document.getElementById("navigationFilteredCars");
 
     $.getJSON('../data/cars.json', function(coches) {
         
@@ -38,8 +50,16 @@ var getFilteredCars = function(params) {
 
         if (data.length > 0) {
             data.forEach(carData => {
-                createFilteredCar(carData);
+                objJson.push(carData);
             });
+            navigationFilteredCars.innerHTML = "<nav aria-label=\"Page navigation example\"> \
+                <ul class=\"pagination justify-content-center\"> \
+                    <li class=\"page-item\"><a class=\"page-link\" id=\"btn_prev\" href=\"javascript:prevPage()\">Previous</a></li> \
+                    <li class=\"page-item\"><a class=\"page-link\"><span id=\"page\"></span></a></li> \
+                    <li class=\"page-item\"><a class=\"page-link\" id=\"btn_next\" href=\"javascript:nextPage()\">Next</a></li> \
+                </ul> \
+            </nav>";
+            changePage(1);
         } else {
             // var text = "<p id=\"noFilteredCars\">NO HAY COCHES PARA LA BUSQUEDA SELECCIONADA</p>";
             var text = "<div class=\"col-10 mt-5 justify-content-center\"> \
@@ -54,22 +74,40 @@ var getFilteredCars = function(params) {
 
 }
 
-var createFilteredCar = function(carData) {
-    var htmlCode = "<div class=\"col-lg-4 col-md-8 offset-1 mt-5\"> \
+function changePage(page)
+{
+    var btn_next = document.getElementById("btn_next");
+    var btn_prev = document.getElementById("btn_prev");
+    var filteredCars = document.getElementById("filteredCars");
+    var page_span = document.getElementById("page");
+ 
+    // Validate page
+    if (page < 1) page = 1;
+    if (page > numPages()) page = numPages();
+
+    filteredCars.innerHTML = "";
+
+    var count = 1;
+
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
+
+
+        if (count == 1) {
+            filteredCars.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
             <div class=\"row\"> \
                 <div class=\"col-lg-8 \"> \
                     <div class=\"row \"> \
                         <div class=\"col-4\"> \
-                            <p>{{Marca}} {{Modelo}}</p> \
+                            <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
                         <div class=\"col-4\"></div> \
                         <div class=\"col-4\"> \
-                            <p>{{Precio}}€</p> \
+                            <p>" + objJson[i].Precio +"€</p> \
                         </div> \
                     </div> \
-                    <div class=\"row\"> \
-                        {{Descripcion}} \
-                    </div> \
+                    <div class=\"row\">" +
+                        objJson[i].Descripcion +
+                    " </div> \
                 </div> \
                 <div class=\"col-lg-4\"> \
                     <img class=\"imgCoche d-flex justify-content-end\" src=\"Imagenes/corsaBueno.jpg\"/> \
@@ -78,8 +116,57 @@ var createFilteredCar = function(carData) {
                     <button class=\"button\" onclick=\"window.location.href='infocoche.html'\">Mas Info</button> \
                 </div> \
             </div>";
+            count--;
+        } else {
+            filteredCars.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 ms-lg-5\"> \
+            <div class=\"row\"> \
+                <div class=\"col-lg-8 \"> \
+                    <div class=\"row \"> \
+                        <div class=\"col-4\"> \
+                            <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
+                        </div> \
+                        <div class=\"col-4\"></div> \
+                        <div class=\"col-4\"> \
+                            <p>" + objJson[i].Precio +"€</p> \
+                        </div> \
+                    </div> \
+                    <div class=\"row\">" +
+                        objJson[i].Descripcion +
+                    " </div> \
+                </div> \
+                <div class=\"col-lg-4\"> \
+                    <img class=\"imgCoche d-flex justify-content-end\" src=\"Imagenes/corsaBueno.jpg\"/> \
+                </div> \
+                <div class=\"row\"> \
+                    <button class=\"button\" onclick=\"window.location.href='infocoche.html'\">Mas Info</button> \
+                </div> \
+            </div>";
+            count++;       
+        }
 
-    var text = Mustache.render(htmlCode, carData);
+    }
 
-    $('#filteredCars').append(text);
+    page_span.innerHTML = page + "/" + numPages();
+
+}
+
+function prevPage()
+{
+    if (current_page > 1) {
+        current_page--;
+        changePage(current_page);
+    }
+}
+
+function nextPage()
+{
+    if (current_page < numPages()) {
+        current_page++;
+        changePage(current_page);
+    }
+}
+
+function numPages()
+{
+    return Math.ceil(objJson.length / records_per_page);
 }
