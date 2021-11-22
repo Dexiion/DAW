@@ -1,5 +1,5 @@
 var counter = 1;
-var imageLink = "";
+var imageLinks = [];
 var otherCarsCounter = 0;
 
 var setUp = function() {
@@ -21,7 +21,6 @@ var loadJson = function () {
             createOtherCarCard(randomOtherCar);
         }
 
-
         funcionNueva();
     });
 }
@@ -37,17 +36,19 @@ function randomNoRepeats(array) {
 
 function getImageLink(idCar) {
     $.getJSON('../data/carimages.json', function(images) {
-        images.forEach(image => {
-            if(image.IDCar == idCar) {
-                imageLink = image.Link;
-            }
-        });
+        imageLinks = images.filter(image => image.IDCar == idCar);
     });
 }
 
 var createOutstandingCarCard = function(coche) {
 
     var data = coche;
+    var imageLink = "";
+    if (imageLinks[0]) {
+        imageLink = imageLinks[0].Link
+    } else {
+        imageLink = "Imagenes/defaultCar.png"
+    }
 
     var firstHtmlCard = "<div class=\"carousel-item active\"> \
                             <div class=\"col-lg-3 col-12\"> \
@@ -116,7 +117,12 @@ var createOutstandingCarCard = function(coche) {
 var createOtherCarCard = function(coche) {
 
     var data = coche;
-
+    var imageLink = "";
+    if (imageLinks[0]) {
+        imageLink = imageLinks[0].Link
+    } else {
+        imageLink = "Imagenes/defaultCar.png"
+    }
     var htmlCard = "<div class=\"col-lg-4 mt-4\"> \
                         <div class=\"card-sl mb-3 mb-lg-0\"> \
                             <div class=\"card-image\"> \
