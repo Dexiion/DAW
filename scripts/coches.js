@@ -42,6 +42,12 @@ function changePage(page)
         getImageLink(objJson[i].ID);
         var outstandingIcon = "";
 
+        var descripcion = objJson[i].Descripcion;
+
+        if (descripcion.length > 180) {
+            descripcion = descripcion.substring(0,180) + "...";
+        }
+
         if (objJson[i].Destacado == 1) {
             outstandingIcon = "<i class=\"icon ion-ios-star\"></i>";
         }
@@ -63,7 +69,7 @@ function changePage(page)
                             <h3><a href=\"car-details.html\" class=\"carTitle\">" + outstandingIcon + " " + objJson[i].Marca + " " + objJson[i].Modelo + "</a></h3> \
                             <p class=\"lead\"><strong><b>" + objJson[i].Precio + "€</b></strong></p> \
                             <p>"+ objJson[i].Potencia +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Combustible +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Puertas + " Puertas &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Localizacion + "</p> \
-                            <p>" + objJson[i].Descripcion + "</p> \
+                            <p>" + descripcion + "</p> \
                         </div> \
                         <div class=\"courses-info\"> \
                             <a href=\"infocoche.html?carid=" + objJson[i].ID + "\"class=\"btn btn-danger btn-lg btn-block\">View More</a>\
