@@ -8,23 +8,32 @@ var setUp = function() {
 
 var loadJson = function () {
     $.getJSON('../data/cars.json', function(coches) {
-        coches.forEach(coche => {
-            if (coche.Destacado == 1 ) {
-                getImageLink(coche.ID);
-                createOutstandingCarCard(coche);
-            }
-
-            if (coche.Destacado != 1 && otherCarsCounter < 6) {
-                console.log(coche);
-                getImageLink(coche.ID);
-                createOtherCarCard(coche);
-            }
-
+        var outstandingCars = coches.filter(coche => coche.Destacado == 1);
+        var otherCars = coches.filter(coche => coche.Destacado != 1);
+        outstandingCars.forEach(coche => {
+            getImageLink(coche.ID);
+            createOutstandingCarCard(coche);
         });
+
+        for (let i = 0; i < 6; i++) {
+            var randomOtherCar = randomNoRepeats(otherCars);
+            getImageLink(randomOtherCar.ID);
+            createOtherCarCard(randomOtherCar);
+        }
+
 
         funcionNueva();
     });
 }
+
+function randomNoRepeats(array) {
+    var copy = array.slice(0);
+    if (copy.length < 1) { copy = array.slice(0); }
+    var index = Math.floor(Math.random() * copy.length);
+    var item = copy[index];
+    copy.splice(index, 1);
+    return item;
+  }
 
 function getImageLink(idCar) {
     $.getJSON('../data/carimages.json', function(images) {
