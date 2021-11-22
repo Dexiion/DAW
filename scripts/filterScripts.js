@@ -149,7 +149,7 @@ function changePage(page)
                         <div class=\"courses-detail\"> \
                             <h3><a <a href=\"infocoche.html?carid=" + objJson[i].ID + "\"class=\"carTitle\">" + outstandingIcon + " " + objJson[i].Marca + " " + objJson[i].Modelo + "</a></h3> \
                             <p class=\"lead\"><strong><b>" + objJson[i].Precio + "€</b></strong></p> \
-                            <p>"+ objJson[i].Potencia +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Combustible +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Puertas + " Puertas &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Localizacion + "</p> \
+                            <p>"+ objJson[i].Potencia +" CV&nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Combustible +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Puertas + " Puertas &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Localizacion + "</p> \
                             <p id=\"descripcion\">" + descripcion + "</p> \
                         </div> \
                         <div class=\"courses-info\"> \
@@ -159,6 +159,8 @@ function changePage(page)
                 </div> \
             </div> \
         </div>";
+
+        page_span.innerHTML = page + "/" + numPages();
     }
 
 }
