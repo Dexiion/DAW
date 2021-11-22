@@ -2,6 +2,7 @@ var current_page = 1;
 var records_per_page = 10;
 
 var objJson = []; // Can be obtained from another source, such as your objJson variable
+var imagesJson = []; 
 
 function prevPage()
 {
@@ -38,6 +39,7 @@ function changePage(page)
 
 
         if (count == 1) {
+            getImageLink( objJson[i].ID);
             allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
             <div class=\"row\"> \
                 <div class=\"col-lg-8 \"> \
@@ -55,14 +57,15 @@ function changePage(page)
                     " </div> \
                 </div> \
                 <div class=\"col-lg-4\"> \
-                    <img class=\"imgCoche d-flex justify-content-end\" src=\"Imagenes/corsaBueno.jpg\"/> \
+                    <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
                 </div> \
                 <div class=\"row\"> \
-                    <button class=\"button\" onclick=\"window.location.href='infocoche.html'\">Mas Info</button> \
+                    <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
                 </div> \
             </div>";
             count--;
         } else {
+            getImageLink( objJson[i].ID);
             allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 ms-lg-5\"> \
             <div class=\"row\"> \
                 <div class=\"col-lg-8 \"> \
@@ -80,10 +83,10 @@ function changePage(page)
                     " </div> \
                 </div> \
                 <div class=\"col-lg-4\"> \
-                    <img class=\"imgCoche d-flex justify-content-end\" src=\"Imagenes/corsaBueno.jpg\"/> \
+                    <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
                 </div> \
                 <div class=\"row\"> \
-                    <button class=\"button\" onclick=\"window.location.href='infocoche.html'\">Mas Info</button> \
+                    <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
                 </div> \
             </div>";
             count++;       
@@ -93,6 +96,26 @@ function changePage(page)
 
     page_span.innerHTML = page + "/" + numPages();
 
+}
+
+function getImageLink(idCar) {
+    for (let i = 0; i < imagesJson.length; i++) {
+        const image = imagesJson[i];
+        if(image.IDCar == idCar) {
+            imageLink = image.Link;
+            break;
+        } else {
+            imageLink = "../Imagenes/defaultCar.png";
+        }
+    }
+}
+
+function getImages() {
+    $.getJSON('../data/carimages.json', function(images) {
+        images.forEach(image => {
+            imagesJson.push(image);
+        });
+    });
 }
 
 function numPages()
@@ -105,9 +128,15 @@ window.onload = function() {
         async: false
     });
     $.getJSON('../data/cars.json', function(cars) {
-        cars.forEach(car => {
+        var outstandingCars = cars.filter(car => car.Destacado == 1);
+        var otherCars = cars.filter(car => car.Destacado != 1);
+        outstandingCars.forEach(car => {
             objJson.push(car);
         });
+        otherCars.forEach(car => {
+            objJson.push(car);
+        });
+        getImages();
     });
     $.ajaxSetup({
         async: true

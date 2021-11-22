@@ -179,6 +179,23 @@ input[type=text], input[type=password], textarea {
   resize: none;
   margin-top: 1rem;
 }
+
+.carButton {
+  background-color: #b12d1cce;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.carButton:hover {
+  opacity: 0.8;
+  color: white;
+}
+
   
 button {
   background-color: #b12d1cce;
