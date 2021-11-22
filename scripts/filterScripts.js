@@ -153,7 +153,7 @@ function changePage(page)
                             <p id=\"descripcion\">" + descripcion + "</p> \
                         </div> \
                         <div class=\"courses-info\"> \
-                            <a href=\"infocoche.html?carid=" + objJson[i].ID + "\"class=\"btn btn-danger btn-lg btn-block\">View More</a>\
+                            <a href=\"infocoche.html?carid=" + objJson[i].ID + "\"class=\"btn btn-danger btn-lg btn-block\">Mas Info</a>\
                         </div> \
                     </div> \
                 </div> \
