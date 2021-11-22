@@ -42,13 +42,12 @@ function changePage(page)
             getImageLink( objJson[i].ID);
             allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
             <div class=\"row\"> \
-                <div class=\"col-lg-8 \"> \
+                <div class=\"col-lg-8 col-sm-6 \"> \
                     <div class=\"row \"> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 marca\"> \
                             <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
-                        <div class=\"col-4\"></div> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 precio justify-content-end\"> \
                             <p>" + objJson[i].Precio +"€</p> \
                         </div> \
                     </div> \
@@ -56,10 +55,10 @@ function changePage(page)
                         objJson[i].Descripcion +
                     " </div> \
                 </div> \
-                <div class=\"col-lg-4\"> \
+                <div class=\"col-lg-4 col-sm-6\"> \
                     <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
                 </div> \
-                <div class=\"row\"> \
+                <div class=\"row p-0\"> \
                     <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
                 </div> \
             </div>";
@@ -68,13 +67,12 @@ function changePage(page)
             getImageLink( objJson[i].ID);
             allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 ms-lg-5\"> \
             <div class=\"row\"> \
-                <div class=\"col-lg-8 \"> \
+                <div class=\"col-lg-8 col-sm-6\"> \
                     <div class=\"row \"> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 marca\"> \
                             <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
-                        <div class=\"col-4\"></div> \
-                        <div class=\"col-4\"> \
+                        <div class=\"col-6 precio justify-content-end\"> \
                             <p>" + objJson[i].Precio +"€</p> \
                         </div> \
                     </div> \
@@ -82,10 +80,10 @@ function changePage(page)
                         objJson[i].Descripcion +
                     " </div> \
                 </div> \
-                <div class=\"col-lg-4\"> \
+                <div class=\"col-lg-4 col-sm-6\"> \
                     <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
                 </div> \
-                <div class=\"row\"> \
+                <div class=\"row p-0\"> \
                     <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
                 </div> \
             </div>";
