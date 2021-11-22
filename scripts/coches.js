@@ -40,12 +40,17 @@ function changePage(page)
 
         if (count == 1) {
             getImageLink( objJson[i].ID);
+            var outstandingIcon = "";
+            if (objJson[i].Destacado == 1) {
+                outstandingIcon = "<i class=\"icon ion-ios-star\"> Destacado</i>";
+            }
             allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
             <div class=\"row\"> \
                 <div class=\"col-lg-8 col-sm-6 \"> \
                     <div class=\"row \"> \
-                        <div class=\"col-6 marca\"> \
-                            <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
+                        <div class=\"col-6 marca\">" 
+                            + outstandingIcon + 
+                            "<p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
                         <div class=\"col-6 precio justify-content-end\"> \
                             <p>" + objJson[i].Precio +"€</p> \
@@ -65,12 +70,17 @@ function changePage(page)
             count--;
         } else {
             getImageLink( objJson[i].ID);
+            var outstandingIcon = "";
+            if (objJson[i].Destacado == 1) {
+                outstandingIcon = "<i class=\"icon ion-ios-star\"> Destacado</i>";
+            }
             allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 ms-lg-5\"> \
             <div class=\"row\"> \
                 <div class=\"col-lg-8 col-sm-6\"> \
                     <div class=\"row \"> \
-                        <div class=\"col-6 marca\"> \
-                            <p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
+                        <div class=\"col-6 marca\">" 
+                            + outstandingIcon + 
+                            "<p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
                         </div> \
                         <div class=\"col-6 precio justify-content-end\"> \
                             <p>" + objJson[i].Precio +"€</p> \

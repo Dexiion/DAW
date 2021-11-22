@@ -63,18 +63,12 @@ transform: translateX(0);
 }
 
 @media (min-width: 992px) { 
-.card-image img {
-  width: 100%;
-  height: 10vw;
-  object-fit: cover;
-  border-radius: 8px 8px 0px 0;
-}
-}
-
-.card-action:hover {
-  color: #fff;
-  background: #E26D5C;
-  -webkit-animation: pulse 1.5s infinite;
+  .card-image img {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0;
+  }
 }
 
 .card-heading {
