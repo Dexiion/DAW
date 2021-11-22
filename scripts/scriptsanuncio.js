@@ -26,10 +26,6 @@ $(document).ready(function() {
     createInfoCar();
     createImagecontacto();
     createInfoContacto();
-    
-    // console.log(objJson);
-    // console.log(imagesLinks);
-    // console.log(accountJson);
 
 });
 
@@ -173,13 +169,13 @@ var createCarousel = function(){
 
     if(imagesLinks.length > 0){
         imagesLinks.forEach(image => {
-            var firstImage = "<div class=\"carousel-item active\"> \
+            var firstImage = "<div class=\"carousel-item justify-content-around active active\"> \
                 <div class=\"card-image-anuncio\"> \
                     <img src=\"" + image + "\"> \
                 </div>    \
             </div>";
 
-            var otherImage = "<div class=\"carousel-item\"> \
+            var otherImage = "<div class=\"carousel-item justify-content-around\"> \
                 <div class=\"card-image-anuncio img\"> \
                     <img src=\"" + image + "\"> \
                 </div>    \
@@ -192,7 +188,7 @@ var createCarousel = function(){
             }
         });
     }else{
-        var firstImage = "<div class=\"carousel-item active\"> \
+        var firstImage = "<div class=\"carousel-item justify-content-around active active\"> \
                 <div class=\"card-image-anuncio\"> \
                     <img src=\"../Imagenes/defaultCar.png\"> \
                 </div>    \
