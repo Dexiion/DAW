@@ -188,13 +188,15 @@ var createCarousel = function(){
             }
         });
 
-        var carouselNav = "<a class=\"carousel-control-prev bg-transparent w-aut \" href=\"#carouselId\" role=\"button\" data-bs-slide=\"prev\" style=\"height: 32px; width: 32px; margin-top: 13rem !important; margin-left: -1.8rem !important;\"> \
-            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span> \
-        </a> \
-        <a class=\"carousel-control-next bg-transparent w-aut\" href=\"#carouselId\" role=\"button\" data-bs-slide=\"next\" style=\"height: 32px; width: 32px; margin-top: 13rem !important; margin-right: -1.5rem !important;\"> \
-            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span> \
-        </a>";
-        $('#carouselNav').append(carouselNav);
+        if (imagesLinks.length > 1) {
+            var carouselNav = "<a class=\"carousel-control-prev bg-transparent w-aut \" href=\"#carouselId\" role=\"button\" data-bs-slide=\"prev\" style=\"height: 32px; width: 32px; margin-top: 13rem !important; margin-left: -1.8rem !important;\"> \
+                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span> \
+            </a> \
+            <a class=\"carousel-control-next bg-transparent w-aut\" href=\"#carouselId\" role=\"button\" data-bs-slide=\"next\" style=\"height: 32px; width: 32px; margin-top: 13rem !important; margin-right: -1.5rem !important;\"> \
+                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span> \
+            </a>";
+            $('#carouselNav').append(carouselNav);
+        }
 
     }else{
         var firstImage = "<div class=\"carousel-item justify-content-around active active\"> \
