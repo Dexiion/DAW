@@ -1,5 +1,6 @@
 var counter = 1;
 var imageLink = "";
+var otherCarsCounter = 0;
 
 var setUp = function() {
     loadJson();
@@ -12,7 +13,14 @@ var loadJson = function () {
                 getImageLink(coche.ID);
                 createOutstandingCarCard(coche);
             }
+
+            if (coche.Destacado != 1 && otherCarsCounter < 6) {
+                getImageLink(coche.ID);
+                createOtherCarCard(coche);
+            }
+
         });
+
         funcionNueva();
     });
 }
@@ -51,7 +59,7 @@ var createOutstandingCarCard = function(coche) {
                                     <div class=\"card-price\"> \
                                         {{Precio}}€ \
                                     </div> \
-                                    <a href=\"infocoche.html\" class=\"card-button\"> Purchase</a> \
+                                    <a href=\"infocoche.html?carid={{ID}}\" class=\"card-button\"> Purchase</a> \
                                 </div> \
                             </div> \
                         </div>";
@@ -78,7 +86,7 @@ var createOutstandingCarCard = function(coche) {
                                 <div class=\"card-price\"> \
                                     {{Precio}}€ \
                                 </div> \
-                                <a href=\"infocoche.html\" class=\"card-button\"> Purchase</a> \
+                                <a href=\"infocoche.html?carid={{ID}}\" class=\"card-button\"> Purchase</a> \
                             </div> \
                         </div> \
                     </div>";
@@ -93,6 +101,41 @@ var createOutstandingCarCard = function(coche) {
     }
 
     $('#outstandingCarousel').append(text);
+}
+
+var createOtherCarCard = function(coche) {
+
+    var data = coche;
+
+    var htmlCard = "<div class=\"col-lg-4 mt-4\"> \
+                        <div class=\"card-sl mb-3 mb-lg-0\"> \
+                            <div class=\"card-image\"> \
+                                <img src=" +  imageLink + "/> \
+                            </div> \
+                            <div class=\"card-heading\"> \
+                                {{Marca}} \
+                            </div> \
+                            <div class=\"card-subheading\"> \
+                                {{Modelo}} \
+                            </div> \
+                            <div class=\"card-text\"> \
+                                <p style=\"font-size: 1.1em; margin-top: -10px;\">Km: <b>{{Kilometros}} Km</b></p> \
+                                <p style=\"font-size: 1.1em; margin-top: -10px;\">Provincia: <b>{{Localizacion}}</b></p> \
+                            </div> \
+                            <div class=\"card-price\"> \
+                                {{Precio}}€ \
+                            </div> \
+                            <a href=\"infocoche.html?carid={{ID}}\" class=\"card-button\"> Purchase</a> \
+                        </div> \
+                    </div>";
+
+    var text = "";
+
+    text = Mustache.render(htmlCard, data);
+
+    $('#otherCars').append(text);
+
+    otherCarsCounter++;
 }
 
 var funcionNueva = function() {
