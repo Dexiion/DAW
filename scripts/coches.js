@@ -3,11 +3,13 @@ var records_per_page = 10;
 
 var objJson = []; // Can be obtained from another source, such as your objJson variable
 var imagesJson = []; 
+var imageLink = "";
 
 function prevPage()
 {
     if (current_page > 1) {
         current_page--;
+        $('html,body').scrollTop(0);
         changePage(current_page);
     }
 }
@@ -16,6 +18,7 @@ function nextPage()
 {
     if (current_page < numPages()) {
         current_page++;
+        $('html,body').scrollTop(0);
         changePage(current_page);
     }
 }
@@ -33,72 +36,48 @@ function changePage(page)
 
     allCarsHTML.innerHTML = "";
 
-    var count = 1;
-
     for (var i = (page-1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
 
 
-        if (count == 1) {
-            getImageLink( objJson[i].ID);
-            var outstandingIcon = "";
-            if (objJson[i].Destacado == 1) {
-                outstandingIcon = "<i class=\"icon ion-ios-star\"> Destacado</i>";
-            }
-            allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 me-lg-5\"> \
-            <div class=\"row\"> \
-                <div class=\"col-lg-8 col-sm-6 \"> \
-                    <div class=\"row \"> \
-                        <div class=\"col-6 marca\">" 
-                            + outstandingIcon + 
-                            "<p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
-                        </div> \
-                        <div class=\"col-6 precio justify-content-end\"> \
-                            <p>" + objJson[i].Precio +"€</p> \
-                        </div> \
-                    </div> \
-                    <div class=\"row\">" +
-                        objJson[i].Descripcion +
-                    " </div> \
-                </div> \
-                <div class=\"col-lg-4 col-sm-6\"> \
-                    <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
-                </div> \
-                <div class=\"row p-0\"> \
-                    <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
-                </div> \
-            </div>";
-            count--;
-        } else {
-            getImageLink( objJson[i].ID);
-            var outstandingIcon = "";
-            if (objJson[i].Destacado == 1) {
-                outstandingIcon = "<i class=\"icon ion-ios-star\"> Destacado</i>";
-            }
-            allCarsHTML.innerHTML += "<div class=\"col-lg-5 col-md-8 mt-5 ms-lg-5\"> \
-            <div class=\"row\"> \
-                <div class=\"col-lg-8 col-sm-6\"> \
-                    <div class=\"row \"> \
-                        <div class=\"col-6 marca\">" 
-                            + outstandingIcon + 
-                            "<p>" + objJson[i].Marca + " " + objJson[i].Modelo + "</p> \
-                        </div> \
-                        <div class=\"col-6 precio justify-content-end\"> \
-                            <p>" + objJson[i].Precio +"€</p> \
-                        </div> \
-                    </div> \
-                    <div class=\"row\">" +
-                        objJson[i].Descripcion +
-                    " </div> \
-                </div> \
-                <div class=\"col-lg-4 col-sm-6\"> \
-                    <img class=\"imgCoche d-flex justify-content-end\" src=\"" + imageLink + "\"/> \
-                </div> \
-                <div class=\"row p-0\"> \
-                    <a class=\"carButton\" href=\"infocoche.html?carid=" + + objJson[i].ID + "\"><span>Mas Info</span></a> \
-                </div> \
-            </div>";
-            count++;       
+        getImageLink(objJson[i].ID);
+        var outstandingIcon = "";
+
+        var descripcion = objJson[i].Descripcion;
+
+        if (descripcion.length > 180) {
+            descripcion = descripcion.substring(0,180) + "...";
         }
+
+        if (objJson[i].Destacado == 1) {
+            outstandingIcon = "<i class=\"icon ion-ios-star\"></i>";
+        }
+        allCarsHTML.innerHTML += "<div class=\"col-lg-6 col-xs-12\"> \
+            <div class=\"row\"> \
+                <div class=\"col-12\"> \
+                    <div class=\"courses-thumb courses-thumb-secondary\"> \
+                        <div class=\"courses-top\"> \
+                            <div class=\"courses-image text-center\"> \
+                                <img src=\"" + imageLink + "\" class=\"imgCoche\" alt=\"\"> \
+                            </div> \
+                            <div class=\"courses-date\"> \
+                                <span title=\"Author\"><i class=\"fa fa-dashboard\"></i>" + objJson[i].Kilometros + " Km</span> \
+                                <span title=\"Author\"><i class=\"fa fa-cube\"></i>" + objJson[i].Cilindrada + " CC</span> \
+                                <span title=\"Views\"><i class=\"fa fa-cog\"></i>" + objJson[i].CajaDeCambios + "</span> \
+                            </div> \
+                        </div> \
+                        <div class=\"courses-detail\"> \
+                            <h3><a href=\"car-details.html\" class=\"carTitle\">" + outstandingIcon + " " + objJson[i].Marca + " " + objJson[i].Modelo + "</a></h3> \
+                            <p class=\"lead\"><strong><b>" + objJson[i].Precio + "€</b></strong></p> \
+                            <p>"+ objJson[i].Potencia +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Combustible +" &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Puertas + " Puertas &nbsp;&nbsp;/&nbsp;&nbsp; " + objJson[i].Localizacion + "</p> \
+                            <p>" + descripcion + "</p> \
+                        </div> \
+                        <div class=\"courses-info\"> \
+                            <a href=\"infocoche.html?carid=" + objJson[i].ID + "\"class=\"btn btn-danger btn-lg btn-block\">View More</a>\
+                        </div> \
+                    </div> \
+                </div> \
+            </div> \
+        </div>";
 
     }
 
