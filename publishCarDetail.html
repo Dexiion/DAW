@@ -61,8 +61,8 @@
         
 
         <div class="container-fluid p-0">
-            <div class="row no-gutters" id="publishForm">
-                <div class="col-md-4 offset-4 col-sm-12">
+            <div class="row no-gutters justify-content-center" id="publishForm">
+                <div class="col-8">
                     
                     <div class="publishForm">
                         <form action="publishCarImages.html">
@@ -79,8 +79,8 @@
                                 <label for="door"><b>Puertas</b><br></label>
                                 <input type="text" placeholder="Introduzca numero de puertas del vehiculo" name="door" id="door" required><br>
                             
-                                <label for="desc"><b>Descripcion detallada</b></label>
-                                <textarea rows="5" name="desc" id="desc" required> </textarea>
+                                <label for="desc"><b>Descripcion</b></label>
+                                <textarea rows="3" name="desc" id="desc" class="descripcionTextarea" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' required></textarea>
         
                                 <hr>
                             
@@ -92,39 +92,5 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-        <!-- <div class="carReg">
-            <div class="publishForm">
-                <form action="publishCarImages.html">
-                    <div class="container">
-                        <h1>Creacion de anuncio</h1>
-                        <p>Rellene con los detalles del vehiculo</p>
-                        <hr>
-                        <label for="power"><b>Potencia del vehiculo</b><br></label>
-                        <input type="text" placeholder="Introduzca potencia del vehiculo" name="power" id="power" required><br>
-                    
-                        <label for="color"><b>Color</b></label>
-                        <input type="text" placeholder="Introduzca color del vehiculo" name="color" id="color" required>
-                    
-                        <label for="door"><b>Puertas</b><br></label>
-                        <input type="text" placeholder="Introduzca numero de puertas del vehiculo" name="door" id="door" required><br>
-                    
-                        <label for="desc"><b>Descripcion detallada</b></label>
-                        <textarea rows="5" name="desc" id="desc" required> </textarea>
-
-                        <hr>
-                    
-                        <button type="submit" class="nextbtn">Siguiente</button>
-                    </div>
-                </form>
-            </div>
-        </div> -->
     </body>
 </html> 
