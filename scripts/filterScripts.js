@@ -49,8 +49,13 @@ var getFilteredCars = function(params) {
         var data = coches.filter( coche => (localizacion != "*" ? coche.Localizacion == localizacion : coche.Localizacion != "") && (marca != "*" ? coche.Marca == marca : coche.Marca != "") && (combustible != "*" ? coche.Combustible == combustible : coche.Combustible != "") && (preciomin != "*" ? coche.Precio >= preciomin : coche.Precio != "") && (preciomax != "*" ? coche.Precio <= preciomax : coche.Precio != "") && (puertas != "*" ? coche.Puertas == puertas : coche.Puertas != ""));
 
         if (data.length > 0) {
-            data.forEach(carData => {
-                objJson.push(carData);
+            var outstandingCars = data.filter(car => car.Destacado == 1);
+            var otherCars = data.filter(car => car.Destacado != 1);
+            outstandingCars.forEach(car => {
+                objJson.push(car);
+            });
+            otherCars.forEach(car => {
+                objJson.push(car);
             });
             navigationFilteredCars.innerHTML = "<nav aria-label=\"Page navigation example\"> \
                 <ul class=\"pagination justify-content-center\"> \

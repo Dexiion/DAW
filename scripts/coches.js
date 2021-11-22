@@ -105,7 +105,12 @@ window.onload = function() {
         async: false
     });
     $.getJSON('../data/cars.json', function(cars) {
-        cars.forEach(car => {
+        var outstandingCars = cars.filter(car => car.Destacado == 1);
+        var otherCars = cars.filter(car => car.Destacado != 1);
+        outstandingCars.forEach(car => {
+            objJson.push(car);
+        });
+        otherCars.forEach(car => {
             objJson.push(car);
         });
     });
