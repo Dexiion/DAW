@@ -75,7 +75,8 @@
                                 <p>Rellene este formulario para vender su vehiculo</p>
                                 <hr>
                                 <label for="date"><b>Fecha de matriculación</b><br></label>
-                                <input type="text" placeholder="Introduzca fechad de matriculacion de vehiculo" name="date" id="date" required><br>
+                                <input type="text" placeholder="Introduzca fechad de matriculacion de vehiculo" name="date" id="date" required 
+                                pattern="^(19|20)\d\d[-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])$" title="La fecha debe tener formato AAAA-MM-DD" ><br>
                             
                                 <label for="brand"><b>Marca</b></label>
                                 <input type="text" placeholder="Introduzca marca de vehiculo" name="brand" id="brand" required>
@@ -87,7 +88,7 @@
                                 <input type="text" placeholder="Introduzca el combustible usado" name="fuel" id="fuel" required>
         
                                 <label for="km"><b>Kilometros</b><br></label>
-                                <input type="text" placeholder="Kilometros de odometro" name="km" id="km" required>
+                                <input type="text" placeholder="Kilometros de odometro" name="km" id="km" required pattern="^[0-9]+$" title="El valor debe ser numerico, sin espacios ni puntos">
         
                                 <hr>
                             

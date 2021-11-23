@@ -76,13 +76,15 @@
                                 <p>Rellene con los detalles del vehiculo</p>
                                 <hr>
                                 <label for="power"><b>Potencia del vehiculo</b><br></label>
-                                <input type="text" placeholder="Introduzca potencia del vehiculo" name="power" id="power" required><br>
+                                <input type="text" placeholder="Introduzca potencia del vehiculo" name="power" id="power" required
+                                pattern="^[0-9]+$" title="El valor debe ser numerico, sin espacios ni puntos"><br>
                             
                                 <label for="color"><b>Color</b></label>
                                 <input type="text" placeholder="Introduzca color del vehiculo" name="color" id="color" required>
                             
                                 <label for="door"><b>Puertas</b><br></label>
-                                <input type="text" placeholder="Introduzca numero de puertas del vehiculo" name="door" id="door" required><br>
+                                <input type="text" placeholder="Introduzca numero de puertas del vehiculo" name="door" id="door" required
+                                pattern="^[0-9]+$" title="El valor debe ser numerico, sin espacios ni puntos"><br>
                             
                                 <label for="desc"><b>Descripcion</b></label>
                                 <textarea rows="3" name="desc" id="desc" class="descripcionTextarea" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' required></textarea>
