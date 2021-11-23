@@ -40,6 +40,7 @@ var checkIfUserIsLogged = function() {
         $('#loggingButton').hide();
         $('#logoutButton').show();
         $('#publishButton').show();
+        $('#profileButton').show();
     }
 }
 
