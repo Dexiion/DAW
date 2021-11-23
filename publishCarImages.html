@@ -8,6 +8,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="scripts/publishCar.js"></script>
+        <script src="scripts/checkLoggingScripts.js"></script>
         <title></title>
     </head>
 
@@ -31,24 +33,27 @@
                                         <img src="Imagenes/logo.png" width="150" height="80" alt="">
                                     </a>
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" style="float: right; width: 60px; height: 60px;">
-                                    <span class="navbar-toggler-icon"></span>
+                                        <span class="navbar-toggler-icon"></span>
                                     </button>
                                     <div class="collapse navbar-collapse" id="mynavbar">
                                         <ul class="navbar-nav me-auto">
-                                        <li class="nav-item me-3 lg-ms-5">
-                                            <a class="nav-link" href="index.html" style="font-size: 1.8em;">Inicio</a>
-                                        </li>
-                                        <li class="nav-item me-3 lg-ms-5">
-                                            <a class="nav-link" href="coches.html" style="font-size: 1.8em;">Coches</a>
-                                        </li>
-                                        <li class="nav-item me-3">
-                                            <a class="nav-link" href="perfil.html" style="font-size: 1.8em;">Perfil</a>
-                                        </li>
+                                            <li class="nav-item me-3 lg-ms-5">
+                                                <a class="nav-link" href="index.html" style="font-size: 1.8em;">Inicio</a>
+                                            </li>
+                                            <li class="nav-item me-3 lg-ms-5">
+                                                <a class="nav-link" href="coches.html" style="font-size: 1.8em;">Coches</a>
+                                            </li>
+                                            <li class="nav-item me-3">
+                                                <a class="nav-link" href="perfil.html" style="font-size: 1.8em;">Perfil</a>
+                                            </li>
                                         </ul>
                                         <form class="d-flex align-items-center">
                                             <button type="button" class="btn btn-outline-danger me-5" onclick="window.location.href='publishCar.html'">Publicar Anuncio</button>
-                                            <button type="button" class="btn btn-success d-table mx-auto" data-bs-toggle="modal" data-bs-target="#ModalForm">
+                                            <button type="button" class="btn btn-success mx-auto" data-bs-toggle="modal" data-bs-target="#ModalForm" id="loggingButton">
                                                 Iniciar Sesión
+                                            </button>
+                                            <button type="button" class="btn btn-danger mx-auto" onClick="logOut()" id="logoutButton" style="display: none;">
+                                                Cerrar Sesión
                                             </button>
                                         </form>
                                     </div>
@@ -72,11 +77,13 @@
                                 <p>Complete su anuncio con las fotos de su vehiculo</p>
                                 <hr>
                                 
-                                <label for="imageUpload">Seleccione las imagenes para añadir a su anuncio</label>
-                                <input type="file" multiple id="gallery-photo-add"> <input type="button" value="Clear" onclick="clearInputFile()">
-                                <div class="gallery" id="galeria"></div><br>
+                                <label for="gallery-photo-add">Seleccione las imagenes para añadir a su anuncio</label>
+                                <div class="field" align="left">
+                                    <h3>Upload your images</h3>
+                                    <input type="file" id="files" name="files[]" multiple />
+                                </div>
                                 <div>
-                                    <button type="submit" class="publishbtn">Publicar</button>
+                                    <button type="submit" class="publishbtn mt-2">Publicar</button>
                                 </div>
                             </div>
                         </form>
@@ -86,35 +93,31 @@
             </div>
         </div>
         <script>
-            $(function() {
-                // Multiple images preview in browser
-                var imagesPreview = function(input, placeToInsertImagePreview) {
-
-                    if (input.files) {
-                        var filesAmount = input.files.length;
-
-                        for (i = 0; i < filesAmount; i++) {
-                            var reader = new FileReader();
-
-                            reader.onload = function(event) {
-                                $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-                            }
-
-                            reader.readAsDataURL(input.files[i]);
-                        }
-                    }
-
-                };
-
-                $('#gallery-photo-add').on('change', function() {
-                    imagesPreview(this, 'div.gallery');
+            $(document).ready(function() {
+              if (window.File && window.FileList && window.FileReader) {
+                $("#files").on("change", function(e) {
+                  var files = e.target.files,
+                    filesLength = files.length;
+                  for (var i = 0; i < filesLength; i++) {
+                    var f = files[i]
+                    var fileReader = new FileReader();
+                    fileReader.onload = (function(e) {
+                      var file = e.target;
+                      $("<span class=\"pip\">" +
+                        "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                        "<br/><span class=\"remove\">Remove image</span>" +
+                        "</span>").insertAfter("#files");
+                      $(".remove").click(function(){
+                        $(this).parent(".pip").remove();
+                      });
+                    });
+                    fileReader.readAsDataURL(f);
+                  }
                 });
-            });
-
-            function clearInputFile(f){
-                $("#gallery-photo-add").val("");
-                $("#galeria").html("");
-            }
+              } else {
+                alert("Your browser doesn't support to File API")
+              }
+        });
         </script>
     </body>
 </html>

@@ -2,27 +2,7 @@ var current_page = 1;
 var records_per_page = 10;
 var imageLink = "";
 var objJson = [];
-var imagesJson = []; 
-
-$(document).ready(function() {
-    var params = getQueryParams();
-    if(params.get('location') == 'Provincia' && params.get('brand') == 'Marca' && params.get('fuel') == 'Combustible' && params.get('minprice') == 'Min.' && params.get('maxprice') == 'Max.' && params.get('doors') == 'Puertas') {
-        var text = "<div class=\"col-10 mt-5 justify-content-center\"> \
-        <div class=\"alert alert-primary h2 text-center\" role=\"alert\"> \
-            No ha seleccionado ningun filtro \
-        </div>\
-    </div>";
-        $('#filteredCars').append(text);
-    } else {
-        $.ajaxSetup({
-            async: false
-        });
-        getFilteredCars(params);
-        $.ajaxSetup({
-            async: true
-        });
-    }
-});
+var imagesJson = [];
 
 var getQueryParams = function() {
     return new URLSearchParams(window.location.search);
@@ -187,3 +167,24 @@ function numPages()
 {
     return Math.ceil(objJson.length / records_per_page);
 }
+
+$(document).ready(function() {
+    checkIfUserIsLogged();
+    var params = getQueryParams();
+    if(params.get('location') == 'Provincia' && params.get('brand') == 'Marca' && params.get('fuel') == 'Combustible' && params.get('minprice') == 'Min.' && params.get('maxprice') == 'Max.' && params.get('doors') == 'Puertas') {
+        var text = "<div class=\"col-10 mt-5 justify-content-center\"> \
+        <div class=\"alert alert-primary h2 text-center\" role=\"alert\"> \
+            No ha seleccionado ningun filtro \
+        </div>\
+    </div>";
+        $('#filteredCars').append(text);
+    } else {
+        $.ajaxSetup({
+            async: false
+        });
+        getFilteredCars(params);
+        $.ajaxSetup({
+            async: true
+        });
+    }
+});

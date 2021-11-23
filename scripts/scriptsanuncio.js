@@ -210,3 +210,7 @@ var createCarousel = function(){
     
 }
 
+$(document).ready(function() {
+    checkIfUserIsLogged();
+});
+

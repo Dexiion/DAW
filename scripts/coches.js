@@ -5,6 +5,8 @@ var objJson = []; // Can be obtained from another source, such as your objJson v
 var imagesJson = []; 
 var imageLink = "";
 
+
+
 function prevPage()
 {
     if (current_page > 1) {
@@ -109,6 +111,10 @@ function numPages()
 {
     return Math.ceil(objJson.length / records_per_page);
 }
+
+$(document).ready(function() {
+    checkIfUserIsLogged();
+});
 
 window.onload = function() {
     $.ajaxSetup({
