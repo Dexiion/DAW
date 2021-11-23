@@ -78,12 +78,10 @@
                                 <hr>
                                 
                                 <label for="gallery-photo-add">Seleccione las imagenes para añadir a su anuncio</label>
-                                <div class="field" align="left">
-                                    <h3>Upload your images</h3>
-                                    <input type="file" id="files" name="files[]" multiple />
-                                </div>
+                                <input type="file" multiple id="gallery-photo-add"> <input type="button" value="Clear" onclick="clearInputFile()">
+                                <div class="gallery" id="galeria"></div><br>
                                 <div>
-                                    <button type="submit" class="publishbtn mt-2">Publicar</button>
+                                    <button type="submit" class="publishbtn">Publicar</button>
                                 </div>
                             </div>
                         </form>
@@ -93,31 +91,35 @@
             </div>
         </div>
         <script>
-            $(document).ready(function() {
-              if (window.File && window.FileList && window.FileReader) {
-                $("#files").on("change", function(e) {
-                  var files = e.target.files,
-                    filesLength = files.length;
-                  for (var i = 0; i < filesLength; i++) {
-                    var f = files[i]
-                    var fileReader = new FileReader();
-                    fileReader.onload = (function(e) {
-                      var file = e.target;
-                      $("<span class=\"pip\">" +
-                        "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
-                        "<br/><span class=\"remove\">Remove image</span>" +
-                        "</span>").insertAfter("#files");
-                      $(".remove").click(function(){
-                        $(this).parent(".pip").remove();
-                      });
-                    });
-                    fileReader.readAsDataURL(f);
-                  }
+            $(function() {
+                // Multiple images preview in browser
+                var imagesPreview = function(input, placeToInsertImagePreview) {
+
+                    if (input.files) {
+                        var filesAmount = input.files.length;
+
+                        for (i = 0; i < filesAmount; i++) {
+                            var reader = new FileReader();
+
+                            reader.onload = function(event) {
+                                $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                            }
+
+                            reader.readAsDataURL(input.files[i]);
+                        }
+                    }
+
+                };
+
+                $('#gallery-photo-add').on('change', function() {
+                    imagesPreview(this, 'div.gallery');
                 });
-              } else {
-                alert("Your browser doesn't support to File API")
-              }
-        });
+            });
+
+            function clearInputFile(f){
+                $("#gallery-photo-add").val("");
+                $("#galeria").html("");
+            }
         </script>
     </body>
 </html>
