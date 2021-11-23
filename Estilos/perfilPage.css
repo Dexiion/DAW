@@ -73,3 +73,27 @@ body {
       input[type=text]:disabled {
         background:white;
     }
+
+    @media (min-width: 0px) {  
+        .card-image-perfil{
+            /* width: 100%;
+            height: 25vw; */
+            height: 100%;
+            width: 35vw;
+            
+            object-fit: cover;
+            border-radius: 8px 8px 0px 0;
+        }
+        }
+    
+    @media (min-width: 992px) { 
+    .card-image-perfil{
+        /* width: 100%;
+        height: 25vw; */
+        height: 100%;
+        width: 15vw;
+
+        object-fit: cover;
+        border-radius: 8px 8px 0px 0;
+    }
+    }

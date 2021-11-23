@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="scripts/perfilScripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
         <script src="scripts/checkLoggingScripts.js"></script>
         <title></title>
     </head>
@@ -103,29 +104,23 @@
             </div>
         </div>
         
-        <div  class="container-fluid" style="min-height:600px;">
+        <div  class="container-fluid">
             <div class="row mt-5 justify-content-center ">
                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="account-settings">
-                            <div class="user-profile">
-                                <div class="text-center">
-                                    <img src="Imagenes/avatar.png" class="rounded img-fluid" alt="foto Usuario">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="account-settings">
+                                <div class="user-profile" id="cardFoto">
+                                    
                                 </div>
-                                <div class="nombre">
-                                    <h5 class="text-center user-name">Joseph Antony</h5>
-                                    <h6 class="text-center user-email">joseph_antony@gmail.gob</h6>
-                                </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
                 <div class="texto col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                     <div class="card h-100">
-                        <div class="card-body">
+                        <div class="card-body" id="cardData">
                             <div class="row gutters">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <h6 class="mb-2 text-primary">Datos personales</h6>
@@ -133,25 +128,25 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Nombre</label>
-                                        <input type="text" class="form-control"  placeholder="Joseph Antony" disabled > 
+                                        <input type="text" class="form-control"  placeholder="" id="Nombre" disabled > 
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="text" class="form-control" id="eMail" placeholder="joseph_antony@gmail.gob" disabled>
+                                        <input type="text" class="form-control" id="email" placeholder="" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Telefono</label>
-                                        <input type="text" class="form-control" id="phone" placeholder="123 456 789" disabled>
+                                        <input type="text" class="form-control" id="phone" placeholder="" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <label for="website">Pagina web</label>
-                                        <input type="text" class="form-control" id="website" placeholder="www.ejemplo.com" disabled>
+                                        <label for="website">Fecha de nacimiento</label>
+                                        <input type="text" class="form-control" id="edad" placeholder="" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -164,23 +159,19 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label >Provincia</label>
-                                        <input type="text" class="form-control" placeholder="Yemen" disabled>
+                                        <input type="text" class="form-control" id="Provincia" placeholder="" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label >Codigo postal</label>
-                                        <input type="text" class="form-control"  placeholder="22743" disabled>
+                                        <input type="text" class="form-control" id="Codigo"  placeholder="" disabled>
                                     </div>
                                 </div>
                             </div>
-                        <div class="row gutters">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-
-                            </div>
+                            
                         </div>
                     </div>
-                </div>
                 </div>
                 </div>
         </div>
