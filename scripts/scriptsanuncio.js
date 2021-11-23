@@ -156,6 +156,10 @@ var createInfoCar = function(){
                     <td>Caja de cambios</td> \
                     <td>{{CajaDeCambios}}</td> \
                 </tr> \
+                <tr> \
+                    <td>Cilindrada</td> \
+                    <td>{{Cilindrada}}</td> \
+                </tr> \
             </tbody> \
         </table> \
     </div>";
