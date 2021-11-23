@@ -1,0 +1,19 @@
+,
+    {
+        "ID": "25",
+        "Marca": "Seat",
+        "IDUsuario": "1",
+        "Modelo": "Leon",
+        "Matriculacion": "2021-11-09",
+        "Kilometros": "100",
+        "Cilindrada": "1800",
+        "Combustible": "Gasolina",
+        "Localizacion": "Santa Cruz de Tenerife",
+        "Potencia": "0",
+        "Color": "Blanco",
+        "Puertas": "3",
+        "CajaDeCambios": "Manual",
+        "Descripcion": "Coche Rally",
+        "Precio": "15000",
+        "Destacado": "1"
+    }

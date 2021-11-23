@@ -16,7 +16,10 @@ var loadJson = function () {
             createOutstandingCarCard(coche);
         });
 
+
+
         for (let i = 0; i < 6; i++) {
+            
             var randomOtherCar = randomNoRepeats(otherCars);
             getImageLink(randomOtherCar.ID);
             createOtherCarCard(randomOtherCar);
