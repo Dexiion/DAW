@@ -159,7 +159,7 @@ transform: translateX(0);
   padding-left: 8rem !important;
 }
 
-input[type=text], input[type=password], textarea {
+input[type=text], input[type=password], input[type=email], textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

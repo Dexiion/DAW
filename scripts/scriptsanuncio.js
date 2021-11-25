@@ -8,6 +8,7 @@ var imagesLinks = [];
 var accountJson = [];  
 
 $(document).ready(function() {
+    checkIfUserIsLogged();
     var params = getQueryParams();
     carID = params.get("carid")
     $.ajaxSetup({
@@ -213,8 +214,4 @@ var createCarousel = function(){
     }
     
 }
-
-$(document).ready(function() {
-    checkIfUserIsLogged();
-});
 

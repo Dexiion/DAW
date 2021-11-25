@@ -66,7 +66,7 @@
       
     <div class="register">
         <div class="registerForm">
-            <form action="Home.html">
+            <form action="index.html" method='post'  id="registerForm">
                 <div class="container">
                   <h1>Registro</h1>
                   <p>Rellene este formulario para crear su cuenta</p>
@@ -75,19 +75,23 @@
                   <input type="text" placeholder="Introduzca Nombre de Usuario" name="user" id="user" required>
               
                   <label for="email"><b>Email</b></label>
-                  <input type="text" placeholder="Introduzca Email" name="email" id="email" required>
+                  <input type="email" placeholder="Introduzca Email" name="email" id="email" required >
               
                   <label for="psw"><b>Contraseña</b></label>
-                  <input type="password" placeholder="Introduzca Contraseña" name="psw" id="psw" required>
+                  <input type="password" placeholder="Introduzca Contraseña" name="psw" id="psw" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$" title="La contraseña debe ser de 6 caracteres minimo, contener al menos una Mayuscula, una Minusucla, un Numero y un Caracter Especial" required>
               
                   <label for="psw-repeat"><b>Repetir Contraseña</b></label>
-                  <input type="password" placeholder="Repita la Contraseña" name="psw-repeat" id="psw-repeat" required>
+                  <input type="password" placeholder="Repita la Contraseña" name="psw-repeat" id="psw-repeat" oninput="check(this)" required>
+
+                  <div id="passwordNotMatch">
+                    
+                  </div>
 
                   <label for="loc"><b>Provincia</b></label>
                   <input type="text" placeholder="Provincia" name="loc" id="loc" required>
 
                   <label for="tel"><b>Telefono</b></label>
-                  <input type="text" placeholder="Telefono (Ópcional) - Ej: 123 456 789" name="tel" id="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+                  <input type="text" placeholder="Telefono (Ópcional) - Ej: 123 456 789" name="tel" id="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" title="El telefono deben ser 9 numeros agrupados en 3 separados por espacios Ej: 123 456 789">
                   <hr>
               
                   <p>Creando esta cuenta usted acepta nuestra <a href="#">Politica y Terminos</a>.</p>
@@ -96,13 +100,21 @@
               </form>
         </div>
     </div>
-      <script>
+      <script script language='javascript' type='text/javascript'>
             var modal = document.getElementById('id01');
 
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
+            }
+
+            function check(input) {
+              if (input.value != document.getElementById('psw').value) {
+                  input.setCustomValidity('Las contraseñas deben coincidir');
+              } else {
+                  input.setCustomValidity('');
+              }
             }
         </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

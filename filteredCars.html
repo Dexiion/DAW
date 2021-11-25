@@ -48,7 +48,7 @@
                                                 <a class="nav-link" href="perfil.html" id="profileButton" style="font-size: 1.8em; display: none;">Perfil</a>
                                             </li>
                                         </ul>
-                                        <form class="d-flex align-items-center">
+                                        <form method='post' class="d-flex align-items-center">
                                             <button type="button" class="btn btn-outline-danger me-5" onclick="window.location.href='publishCar.html'" id="publishButton" style="display: none;">Publicar Anuncio</button>
                                             <button type="button" class="btn btn-success mx-auto" data-bs-toggle="modal" data-bs-target="#ModalForm" id="loggingButton">
                                                 Iniciar Sesión
@@ -71,7 +71,7 @@
         <div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <form action="" method="get" id="perfilForm">
+                    <form action="index.html" method="post" id="perfilForm">
                         <div class="modal-header">
                             <h5 class="modal-title">Inicio de Sesión</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

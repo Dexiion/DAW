@@ -19,6 +19,7 @@ var checkLogging = function() {
                 var userID = document.getElementById("id").value = data[0].ID;
                 localStorage.setItem('userID', userID);
                 document.getElementById("perfilForm").submit();
+                window.location.replace("../index.html");
             } else {
                 $('#wrongPasswordAlert').remove();
                 var text = "<div class=\"alert alert-danger alert-dismissible fade show\" id=\"wrongPasswordAlert\"> \
